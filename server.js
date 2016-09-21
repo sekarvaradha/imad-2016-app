@@ -26,8 +26,16 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+app.get('/ui/1.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', '1.png'));
+});
+
+app.get('/ui/banner2.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'banner2.jpg'));
+  
+});
+app.get('/ui/banner3.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'banner3.jpg'));
 });
 
 
