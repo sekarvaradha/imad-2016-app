@@ -26,3 +26,5 @@ text-decoration:none;
 font-family:helvetica;
 font-size:16px;
 }
+.photo { height:100px; border:none;
+}
