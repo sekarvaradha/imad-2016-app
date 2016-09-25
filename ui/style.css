@@ -29,10 +29,10 @@ font-size:16px;
 .photo { height:100px; border:none;
 }
 hr { color:maroon;}
-label { font-family:Arial;font-size:16px;
+label { font-family:Arial;font-size:15px;
 }
 table { border:2px double white;
 }
-td,th {padding:2px;font-family:sans-serif,helvetica;font-size:16px;}
+td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 
 .image { height:100px; border:2px solid navy;padding:1px;}
