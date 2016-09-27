@@ -21,14 +21,14 @@ body {
     height: 200px;
 }
 
-ul { list-style-type:none;
-text-decoration:none;
-font-family:helvetica;
-font-size:16px;
-display :inline;
+
+.container {
+width:800px;
+margin:0 auto;
+background-color:white;
+border:1px solid grey;
 }
-.photo { height:100px; border:none;
-}
+
 hr { color:maroon;}
 label { font-family:Arial;font-size:15px;
 }
