@@ -63,8 +63,8 @@ app.get('/ui/gmail.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
 });
 
-app.get('/ui/youtube.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'youtube.jpg'));
+app.get('/ui/youtube.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'youtube.png'));
 });
 app.get('/ui/git.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'git.png'));
