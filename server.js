@@ -14,9 +14,8 @@ res.send(counter.toString());
 
 var names=[];
 app.get('/submit-name/:name', function(req,res){
- var name =res.params.name;
+ var name =req.params.name;
  names.push(name);
- 
  res.send(JSON.stringify(names));
 });
 
