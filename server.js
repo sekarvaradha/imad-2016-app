@@ -50,21 +50,21 @@ app.get('/ui/banner2.jpg', function (req, res) {
 app.get('/ui/banner3.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'banner3.jpg'));
 });
-app.get('/ui/phot.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'phot.jpg'));
+app.get('/ui/sekar.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'sekar.jpg'));
 });
-app.get('/ui/f1.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'f1.png'));
+app.get('/ui/facebook.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'facebook.png'));
 });
-app.get('/ui/t2.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 't2.png'));
+app.get('/ui/twitter.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'twitter.png'));
 });
 app.get('/ui/gmail.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
 });
 
-app.get('/ui/utube.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'utube.jpg'));
+app.get('/ui/youtube.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'youtube.jpg'));
 });
 app.get('/ui/git.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'git.png'));
