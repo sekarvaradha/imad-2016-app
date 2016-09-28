@@ -18,6 +18,6 @@ request.onreadystatechange =function(){
    
 };
 // render the variable in the correct span
-  request.open('GET', 'https://sekarvaradha.imad.hasura.app.io/counter','true');
+  request.open('GET', 'https://sekarvaradha.imad.hasura-app.io/counter','true');
   request.send(null);
 };
