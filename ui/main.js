@@ -22,6 +22,7 @@ request.onreadystatechange =function(){
   request.send(null);
   
 };
+
 var nameinput=document.getElementbyId('Name');
 var value=nameinput.value;
 var submit =document.getElementById('submit-btn');
@@ -32,7 +33,7 @@ submit.onclick = function() {
   var list='';
   for (var i=0;i<name.length;i++)
    {
-     list = '<li>' + names[i] + '</li>';
+     list += '<li>' + names[i] + '</li>';
    }
    var ul = document.getElementById(namelist);
    ui.innerHTML =list;
