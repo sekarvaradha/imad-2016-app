@@ -13,7 +13,7 @@ res.send(counter.toString());
 
 
 var names=[];
-app.get('/submit-name', function(req,res){    // using  ?name
+app.get('/submit-name', function(req,res){    // using url ?name=name method
  var name =req.params.name;
  names.push(name);
  res.send(JSON.stringify(names));
