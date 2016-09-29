@@ -44,11 +44,9 @@ var submit =document.getElementById('submit-btn');
              }
 	
 	     var ul = document.getElementById(namelist);
-         ui.innerHTML =list;
+         ul.innerHTML =list;
          }
    }        
-  
- 
   
 };
     var nameinput=document.getElementbyId('Name');
