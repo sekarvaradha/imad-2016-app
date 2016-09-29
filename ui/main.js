@@ -20,6 +20,7 @@ button.onclick = function(){
 // render the variable in the correct span
 //  request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter',true);
   //request.send(null);
+  alert("hello");
   counter=counter+1;
   var span=document.getElementById("count");
   span.innerHTML=counter.toString();
@@ -27,7 +28,7 @@ button.onclick = function(){
 };
 
 
-var submit =document.getElementById('submit-btn');
+/*var submit =document.getElementById('submit-btn');
  submit.onclick = function() {
   var request = new XMLHttpRequest();
 // capture the response and store in a variable
@@ -55,4 +56,4 @@ var submit =document.getElementById('submit-btn');
     var name=nameinput.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name='+name,true);
      request.send(null);
- };  
+ };  */
