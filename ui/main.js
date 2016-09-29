@@ -37,6 +37,7 @@ var submit =document.getElementById('submit-btn');
       {
       if (request.status===200)
        { 
+           alert("ok");
 	     var names=request.responseText;
 	     names=JSON.parse(names);
 	     var list='';
