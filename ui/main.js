@@ -1,5 +1,5 @@
 // counter code
-var counter=0;
+
 var button=document.getElementById("counter");
 
 button.onclick = function(){
@@ -20,6 +20,6 @@ button.onclick = function(){
 };
 
    // make the request
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter' +name,true);
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter' ,true);
      request.send(null);
 };
