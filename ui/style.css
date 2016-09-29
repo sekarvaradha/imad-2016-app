@@ -36,4 +36,11 @@ table { border:2px double white;
 }
 td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 
-.image { height:100px; border:2px solid grey;padding:1px;}
+
+ .profile-photo {
+    width:120px;
+    height:100px;
+    border-radius:25px;
+    border:1px solid lightgrey;
+    }
+     
