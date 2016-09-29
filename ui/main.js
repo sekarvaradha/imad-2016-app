@@ -27,8 +27,7 @@ button.onclick = function(){
 
 // Name List Programme
 
-var nameInput =document.getElementById('name');
-var name=nameInput.value;
+
 var submit =document.getElementById('submit-btn');
  submit.onclick = function() {
   var request = new XMLHttpRequest();
@@ -46,7 +45,7 @@ var submit =document.getElementById('submit-btn');
            list += '<li>' + names[i] + '</li>';
              }
 	
-	     var ul = document.getElementById(namelist);
+	     var ul = document.getElementById('namelist');
          ul.innerHTML =list;
          }
    }        
