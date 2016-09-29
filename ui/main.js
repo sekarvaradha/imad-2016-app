@@ -6,11 +6,11 @@ button.onclick = function(){
 
  var request = new XMLHttpRequest();
     //create a request
- request.onreadystatechange =function(){
+ request.onreadystatechange=function(){
  if (request.readyState === XMLHttpRequest.DONE)
   {
       // take some action
-    if (request.Status==200)
+    if (request.Status===200)
        { 
         counter=request.responseText;
         var span=document.getElementById("count");
@@ -20,6 +20,6 @@ button.onclick = function(){
 };
 
    // make the request
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter' ,true);
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter', true);
      request.send(null);
 };
