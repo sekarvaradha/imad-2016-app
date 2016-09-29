@@ -36,6 +36,7 @@ var submit =document.getElementById('submit-btn');
   request.onreadystatechange =function(){
      if (request.readyState === XMLHttpRequest.DONE)
       {
+          alert("doneok");
       if (request.status===200)
        { 
            alert("ok");
