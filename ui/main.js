@@ -62,8 +62,9 @@ var submit =document.getElementById('submit-btn');
  
  // making comments
  
- var comment=document.getElementById("comment-btn");
- comment.onclick = function(){
+ var bttn=document.getElementById("comment-btn");
+ alert("Hi");
+ bttn.onclick = function(){
   alert ("ok");
  /* var request = new XMLHttpRequest();
     //create a request
@@ -86,7 +87,7 @@ var submit =document.getElementById('submit-btn');
    var comments=document.getElementById('comment');
    var txt =comment.value;
   
-    var div =document.getElementById("show-comment");
+    var div=document.getElementById("show-comment");
     div.innerHTML= txt;
   /*  request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
      request.send(null); */
