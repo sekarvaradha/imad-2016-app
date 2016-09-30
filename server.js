@@ -19,6 +19,12 @@ app.get('/submit-name', function(req,res){    // using url ?name=name method
  res.send(JSON.stringify(names));
 });
 
+var comments='';
+app.get('/comment/:comment', function(req,res){    // using url ?name=name method
+ var comment =req.query.comment;
+ res.send(comment);
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
