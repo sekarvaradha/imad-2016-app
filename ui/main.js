@@ -39,7 +39,7 @@ var submit =document.getElementById('submit-btn');
         
       if (request.status===200)
        { 
-           alert("ok");
+           
 	     var names=request.responseText;
 	     names=JSON.parse(names);
 	     var list='';
@@ -56,8 +56,8 @@ var submit =document.getElementById('submit-btn');
   
 };
     var nameInput=document.getElementById('name');
-    var name=nameInput.value;
-    alert (name);
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name='+name,true);
-     request.send(null);
+    var name1=nameInput.value;
+    alert (name1);
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=' + name1 ,true);
+    request.send(null);
  };  
