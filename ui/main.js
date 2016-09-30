@@ -65,7 +65,7 @@ var submit =document.getElementById('submit-btn');
  var button=document.getElementById("comment-btn");
  button.onclick = function(){
   alert ("ok");
- var request = new XMLHttpRequest();
+ /* var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
@@ -79,15 +79,17 @@ var submit =document.getElementById('submit-btn');
          div.innerHTML= comment;
        }
   }
-};
+}; */
 
    // make the request
+  
    var comment=document.getElementById('comment');
-    
-    var txt =comment.value;
-     alert (txt);
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
-     request.send(null);
+   var txt =comment.value;
+  
+    var div =document.getElementById("show-comment");
+    div.innerHTML= txt;
+  /*  request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
+     request.send(null); */
 }; 
 
  
