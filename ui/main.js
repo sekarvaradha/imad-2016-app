@@ -62,8 +62,8 @@ var submit =document.getElementById('submit-btn');
  
  // making comments
  
- var button=document.getElementById("comment-btn");
- button.onclick = function(){
+ var comment=document.getElementById("comment-btn");
+ comment.onclick = function(){
   alert ("ok");
  /* var request = new XMLHttpRequest();
     //create a request
@@ -83,7 +83,7 @@ var submit =document.getElementById('submit-btn');
 
    // make the request
   
-   var comment=document.getElementById('comment');
+   var comments=document.getElementById('comment');
    var txt =comment.value;
   
     var div =document.getElementById("show-comment");
