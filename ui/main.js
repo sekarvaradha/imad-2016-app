@@ -65,7 +65,7 @@ var submit =document.getElementById('submit-btn');
  
  var bttn=document.getElementById("comment-btn");
  bttn.onclick = function(){
-  alert ("ok");
+ 
  var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
@@ -74,7 +74,7 @@ var submit =document.getElementById('submit-btn');
       // take some action
     if (request.status===200)
        { 
-           alert("ok...ok");
+          
         var comment =request.responseText;
         var div =document.getElementById("show-comment");
          div.innerHTML= comment;
