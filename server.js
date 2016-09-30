@@ -19,9 +19,9 @@ app.get('/submit-name', function(req,res){    // using url ?name=name method
  res.send(JSON.stringify(names));
 });
 
-var comments='';
-app.get('/comment/:comment', function(req,res){    // using url ?name=name method
- var comment =req.query.comment;
+var comment='';
+app.get('/submit-comment/:comment', function(req,res){    // using url ?name=name method
+ comment =req.query.comment;
  res.send(comment);
 });
 
