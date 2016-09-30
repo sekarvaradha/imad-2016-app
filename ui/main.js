@@ -33,7 +33,7 @@ var submit =document.getElementById('submit-btn');
      alert("ok");
   var request = new XMLHttpRequest();
 // capture the response and store in a variable
-  request.onreadystatechange =function(){
+  request.onreadystatechange = function() {
      if (request.readyState === XMLHttpRequest.DONE)
       {
           alert("doneok");
@@ -43,19 +43,19 @@ var submit =document.getElementById('submit-btn');
 	     var names=request.responseText;
 	     names=JSON.parse(names);
 	     var list='';
-        for (var i=0;i<name.length;i++)
+        for (var i=0;i<names.length;i++)
           {
            list += '<li>' + names[i] + '</li>';
              }
 	
 	     var ul = document.getElementById('namelist');
-         ul.innerHTML =list;
+         ul.innerHTML = list;
          }
    }        
   
 };
-    var nameinput=document.getElementbyId('name');
-    var name=nameinput.value;
+    var nameInput=document.getElementbyId('name');
+    var name=nameInput.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=',+ name,true);
      request.send(null);
  };  
