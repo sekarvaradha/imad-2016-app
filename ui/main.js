@@ -82,7 +82,9 @@ var submit =document.getElementById('submit-btn');
 };
 
    // make the request
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' + comment, true);
+   var comment=document.getElementById('comment');
+    var txt =comment.value;
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' + txt, true);
      request.send(null);
 }; 
 
