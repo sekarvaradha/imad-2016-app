@@ -84,7 +84,7 @@ var submit =document.getElementById('submit-btn');
    // make the request
    var comment=document.getElementById('comment');
     var txt =comment.value;
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' + txt, true);
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment/' , txt, true);
      request.send(null);
 }; 
 
