@@ -63,10 +63,9 @@ var submit =document.getElementById('submit-btn');
  // making comments
  
  var bttn=document.getElementById("comment-btn");
- alert("Hi");
  bttn.onclick = function(){
   alert ("ok");
- /* var request = new XMLHttpRequest();
+ var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
@@ -80,12 +79,12 @@ var submit =document.getElementById('submit-btn');
          div.innerHTML= comment;
        }
   }
-}; */
+}; 
 
    // make the request
   
-   var comments=document.getElementById('comment');
-   var txt =comment.value;
+   //var comments=document.getElementById('comment');
+   //var txt =comment.value;
   
     var div=document.getElementById("show-comment");
     div.innerHTML= txt;
