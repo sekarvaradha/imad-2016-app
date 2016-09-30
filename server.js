@@ -16,14 +16,14 @@ app.get('/submit-name', function(req,res){    // using url ?name=name method
  var name =req.query.name;
 
  names.push(name);
- res.send(JSON.stringify(names));
+res.send(JSON.stringify(names));
 });
 
 var comment='';
 app.get('/submit-comment', function(req,res){    // using url ?name=name method
  comment =req.query.comment;
- 
- res.send(JSON.stringify(comment));
+ res.send(comment);
+ //res.send(JSON.stringify(comment));
 });
 
 app.get('/', function (req, res) {
