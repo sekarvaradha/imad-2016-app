@@ -57,6 +57,7 @@ var submit =document.getElementById('submit-btn');
 };
     var nameInput=document.getElementById('name');
     var name=nameInput.value;
+    alert (name);
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=',+name,true);
      request.send(null);
  };  
