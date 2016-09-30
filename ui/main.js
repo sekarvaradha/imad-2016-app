@@ -62,7 +62,7 @@ var submit =document.getElementById('submit-btn');
  
  // making comments
  
- var btton=document.getElementById("comment-btn");
+ var button=document.getElementById("comment-btn");
  button.onclick = function(){
   alert ("ok");
  var request = new XMLHttpRequest();
@@ -83,8 +83,10 @@ var submit =document.getElementById('submit-btn');
 
    // make the request
    var comment=document.getElementById('comment');
+    
     var txt =comment.value;
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment/' , txt, true);
+     alert (txt);
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
      request.send(null);
 }; 
 
