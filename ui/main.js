@@ -47,6 +47,7 @@ var submit =document.getElementById('submit-btn');
           
              }
 	
+	 
 	     var ul = document.getElementById('namelist');
          ul.innerHTML = list;
          }
@@ -83,11 +84,8 @@ var submit =document.getElementById('submit-btn');
 
    // make the request
   
-   //var comments=document.getElementById('comment');
-   //var txt =comment.value;
-  
-    //var div=document.getElementById("show-comment");
-    //div.innerHTML= txt;
+   var comments=document.getElementById('comment');
+   var txt =comment.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
      request.send(null); 
 }; 
