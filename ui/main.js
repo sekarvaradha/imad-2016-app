@@ -19,14 +19,12 @@ button.onclick = function(){
        }
   }
 };
-
    // make the request
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter', true);
      request.send(null);
 }; 
 
 // Name List Programme
-
 
 var submit =document.getElementById('submit-btn');
  submit.onclick = function() {
@@ -61,3 +59,34 @@ var submit =document.getElementById('submit-btn');
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=' + name1 ,true);
     request.send(null);
  };  
+ 
+ // making comments
+ 
+ var comment=document.getElementById("comment-btn");
+
+comment.onclick = function(){
+
+ var request = new XMLHttpRequest();
+    //create a request
+ request.onreadystatechange= function(){
+ if (request.readyState === XMLHttpRequest.DONE)
+  {
+      // take some action
+    if (request.status===200)
+       { 
+           //alert("ok");
+        var comment =request.responseText;
+        var div =document.getElementById("show-comment");
+         div.innerHTML= comment;
+       }
+  }
+};
+
+   // make the request
+    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/comment?comment=' + comment, true);
+     request.send(null);
+}; 
+
+ 
+ 
+ 
