@@ -86,8 +86,8 @@ var submit =document.getElementById('submit-btn');
    //var comments=document.getElementById('comment');
    //var txt =comment.value;
   
-    var div=document.getElementById("show-comment");
-    div.innerHTML= txt;
+    //var div=document.getElementById("show-comment");
+    //div.innerHTML= txt;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
      request.send(null); 
 }; 
