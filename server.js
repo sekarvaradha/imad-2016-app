@@ -22,7 +22,7 @@ app.get('/submit-name', function(req,res){    // using url ?name=name method
 var comment='';
 app.get('/submit-comment', function(req,res){    // using url ?name=name method
  comment =req.query.comment;
- res.send(JSON.stingify(comment));
+ res.send(comment);
 });
 
 app.get('/', function (req, res) {
