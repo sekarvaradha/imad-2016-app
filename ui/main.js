@@ -1,6 +1,6 @@
 // counter code
 
-var button=document.getElementById("counter");
+/*var button=document.getElementById("counter");
 
 button.onclick = function(){
 
@@ -23,7 +23,7 @@ button.onclick = function(){
    // make the request
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter', true);
      request.send(null);
-};
+}; */
 
 // Name List Programme
 
@@ -54,7 +54,7 @@ var submit =document.getElementById('submit-btn');
    }        
   
 };
-    var nameInput=document.getElementbyId('name');
+    var nameInput=document.getElementById('name');
     var name=nameInput.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=',+ name,true);
      request.send(null);
