@@ -23,7 +23,7 @@ var comment='';
 app.get('/submit-comment', function(req,res){    // using url ?name=name method
  comment =req.query.comment;
  
- res.send(comment);
+ res.send(JSON.stringify(comment));
 });
 
 app.get('/', function (req, res) {
@@ -90,7 +90,6 @@ app.get('/ui/youtube.png', function (req, res) {
 app.get('/ui/git.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'git.png'));
 });
-
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
