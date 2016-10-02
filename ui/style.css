@@ -4,12 +4,6 @@ body {
     background-color: white;
     margin-top: 5px; 
 }
-ul,li {
-      list-style-type:none;
-      float: left;
-      display:inline-block;
-
-      }
 
 
 .center {
