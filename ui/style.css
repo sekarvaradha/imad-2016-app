@@ -7,7 +7,7 @@ body {
  ul,li {
       list-style-type:none;
       display:inline-block;
-      padding:5px;
+      padding:1px;
       }
  a:hover{ background-color:#121212;
           color:#bfbfbf;
