@@ -3,8 +3,15 @@ body {
     font-family: helvetica;
     background-color: white;
     margin-top: 5px; 
-}
-
+   }
+ ul,li {
+      list-style-type:none;
+      display:inline-block;
+      padding:5px;
+      }
+ a:hover{ background-color:#121212;
+          color:#bfbfbf;
+     }
 
 .center {
     text-align: center;
