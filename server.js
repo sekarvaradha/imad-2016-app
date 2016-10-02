@@ -29,6 +29,11 @@ app.get('/submit-comment', function(req,res){    // using url ?name=name method
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+app.get('/back', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+});
+
 app.get('/article-one', function (req, res){
    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
    });
