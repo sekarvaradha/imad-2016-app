@@ -26,11 +26,11 @@ app.get('/submit-comment', function(req,res){    // using url ?name=name method
  //res.send(JSON.stringify(comment));
 });
 
-var article-one = {
+var articleone = {
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
   date:'september,5 2016',
-  content:'<p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+  content:`<p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
           </p>
           
         <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
@@ -46,7 +46,7 @@ function createTemplate (data) {
      var heading=data.heading;
      var content=data.content;
      
-var HTMLTemplate ='<html>
+var HTMLTemplate =`<html>
     <head>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
