@@ -79,10 +79,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/:profile', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
-});
-
 app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
  res.send(createTemplate(articles[articleName]));
@@ -110,7 +106,9 @@ app.get('/ui/facebook.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'facebook.png'));
 });
 
-
+app.get('/ui/profile', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
