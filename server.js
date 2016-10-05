@@ -109,7 +109,7 @@ app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
 var comment='';
 app.get('/submit-comment',function(req,res){
   comment=req.query.comment;
-res.send(JSON.stringify(comment));
+res.send(comment);
 });
 
 app.get('/:articleName', function (req, res){
