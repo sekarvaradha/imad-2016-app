@@ -77,6 +77,7 @@ var submit =document.getElementById('submit-btn');
           
         var comment =request.responseText;
         var div =document.getElementById("show-comment");
+         div.style.text-align='center';
          div.innerHTML= comment;
        }
   }
