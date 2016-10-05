@@ -26,6 +26,56 @@ app.get('/submit-comment', function(req,res){    // using url ?name=name method
  //res.send(JSON.stringify(comment));
 });*/  ////////
 
+
+var article-one={
+  title:'Article 1 ! SEGAR',
+  heading:'Article-one',
+  date:'september,5 2016',
+  content:'<p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+          </p>
+          
+        <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+          </p>
+          
+          <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+          </p>'
+};
+
+
+var HTMLTemplate ='<html>
+    <head>
+      <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+      <title>${title} </title>
+    </head>
+    
+    <body>
+        <div class="container" style="border:none;">
+     
+       <div>
+        <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
+        </div>
+
+        <div>
+        ${date}
+        </div>
+        <hr>
+
+        <div>
+         
+          ${content}
+          
+        </div>
+        <hr>
+      
+     
+       
+       <script type="text/javascript" src="/ui/main.js"></script>
+    </body>
+</html>';
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
