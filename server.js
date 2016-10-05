@@ -79,7 +79,7 @@ var HTMLTemplate =`
         <div id="show-comment" style="background-color:lightyellow;">     </div>
  
         </div>
-        
+        <script src="ui/main.js"></script>
         </html>`;
 return HTMLTemplate;
 }
