@@ -9,14 +9,15 @@ var articleone = {
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
   date:'september,5 2016',
-  content:`<p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-          </p>
+  content:`
+        <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+         </p>
           
         <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-          </p>
+         </p>
           
-          <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-          </p>`
+         <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
+         </p>`
 };
 
 function createTemplate (data) {
@@ -25,7 +26,8 @@ function createTemplate (data) {
      var heading=data.heading;
      var content=data.content;
      
-var HTMLTemplate ='<html>
+var HTMLTemplate =`
+    <html>
     <head>
     <title>
        ${title}
@@ -41,20 +43,16 @@ var HTMLTemplate ='<html>
        <div>
         <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
         </div>
-
         <div>
         ${date}
         </div>
         <hr>
-
         <div>
-         
-          ${content}
-          
+        ${content}
         </div>
-</html>';
+</html>`;
 return HTMLTemplate;
-};
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
