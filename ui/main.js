@@ -76,7 +76,7 @@ var submit =document.getElementById('submit-btn');
        { 
           
         var comment =request.responseText;
-        document.getElementById("show-comment").style.text-align="center";
+        document.getElementById("show-comment").style.color="blue";
         var div =document.getElementById("show-comment");
          
          div.innerHTML= comment;
