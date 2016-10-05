@@ -16,7 +16,7 @@ var articleone = {
           </p>
           
           <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-          </p>'
+          </p>`
 };
 
 function createTemplate (data) {
