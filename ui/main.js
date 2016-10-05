@@ -76,9 +76,8 @@ var submit =document.getElementById('submit-btn');
        { 
           
         var comment =request.responseText;
-        document.getElementById("show-comment").style.color="blue";
         var div =document.getElementById("show-comment");
-         
+        div.style.color='red'; 
          div.innerHTML= comment;
        }
   }
