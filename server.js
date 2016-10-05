@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*var counter=0;
+var counter=0;
 app.get('/counter', function(req,res){
  counter=counter+1;
 res.send(counter.toString());
@@ -24,10 +24,9 @@ app.get('/submit-comment', function(req,res){    // using url ?name=name method
  comment =req.query.comment;
  res.send(comment);
  //res.send(JSON.stringify(comment));
-});*/  ////////
+});
 
-
-var article-one={
+var article-one = {
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
   date:'september,5 2016',
