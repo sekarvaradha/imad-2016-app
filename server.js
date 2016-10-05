@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-/*var articleone = {
+var articleone = {
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
   date:'september,5 2016',
@@ -55,16 +55,16 @@ var HTMLTemplate ='<html>
         </div>
 </html>';
 return HTMLTemplate;
-};*/
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 
-/*app.get('/article-one', function (req, res){
+app.get('/article-one', function (req, res){
    res.send(createTemplate(articleone));
-   });*/
+   });
    
 
    
