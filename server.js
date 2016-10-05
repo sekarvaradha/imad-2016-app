@@ -94,7 +94,23 @@ app.get('/ui/sekar.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sekar.jpg'));
 });
 
+app.get('/ui/gmail.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
+});
+app.get('/ui/git.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'git.png'));
+});
+app.get('/ui/gmail.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
+});
 
+app.get('/ui/facebook.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'facebook.png'));
+});
+
+app.get('/ui/profile', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
