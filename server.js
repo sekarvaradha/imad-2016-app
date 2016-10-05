@@ -19,23 +19,24 @@ var articles = {
          <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
          </p>`
 },
+
  'article-two' :{
   title:'Article 2 ! SEGAR',
   heading:'Article-two',
   date:'september,10 2016',
   content:`
-        <p> This is my second article. This is my second article.
-        </p>`
+  <p> This is my second article. This is my second article.
+  </p>`
           
         
 },
- 'article-three' :{
+   'article-three' :{
     title:'Article 3 ! SEGAR',
     heading:'Article-three',
-     date:'september,16 2016',
+    date:'september,16 2016',
     content:`
-        <p> This is my third article. 
-        </p>`
+    <p> This is my third article. 
+    </p>`
      }
 };
 
