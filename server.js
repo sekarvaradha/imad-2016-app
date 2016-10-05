@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var counter=0;
+/*var counter=0;
 app.get('/counter', function(req,res){
  counter=counter+1;
 res.send(counter.toString());
@@ -24,7 +24,7 @@ app.get('/submit-comment', function(req,res){    // using url ?name=name method
  comment =req.query.comment;
  res.send(comment);
  //res.send(JSON.stringify(comment));
-});
+});*/  ////////
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
