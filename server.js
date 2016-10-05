@@ -61,8 +61,10 @@ var HTMLTemplate =`
      
        <div>
         <div>
-        <a href="/">Home </a>
+        
         <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
+        <a href="/">Home </a>
+        </hr>
         </div>
         <div>
         ${date}
