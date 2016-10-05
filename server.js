@@ -41,7 +41,12 @@ var article-one={
           </p>'
 };
 
-
+function createTemplate (data) {
+     var title= data.title;
+     var date=data.date;
+     var heading=data.heading;
+     var content=data.content;
+     
 var HTMLTemplate ='<html>
     <head>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -66,15 +71,9 @@ var HTMLTemplate ='<html>
           ${content}
           
         </div>
-        <hr>
-      
-     
-       
-       <script type="text/javascript" src="/ui/main.js"></script>
-    </body>
 </html>';
-
-
+return HTMLTemplate;
+};
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -85,7 +84,7 @@ app.get('/back', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   res.send(createTemplate(article-one));
    });
    
 app.get('/article-two', function (req,res){
