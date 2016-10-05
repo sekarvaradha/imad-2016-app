@@ -46,7 +46,7 @@ function createTemplate (data) {
      var heading=data.heading;
      var content=data.content;
      
-var HTMLTemplate =`<html>
+var HTMLTemplate ='<html>
     <head>
     <title>
        ${title}
@@ -73,7 +73,7 @@ var HTMLTemplate =`<html>
           ${content}
           
         </div>
-</html>`;
+</html>';
 return HTMLTemplate;
 };
 
