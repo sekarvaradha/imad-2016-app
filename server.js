@@ -104,6 +104,11 @@ app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
   res.send(JSON.stringify(names));
 });
 
+var comment='';
+app.get('/submit-comment',function(req,res){
+  comment=req.query.comment;
+res.send(JSON.stringify(comment));
+});
 
 app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
