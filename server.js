@@ -61,6 +61,8 @@ var HTMLTemplate =`
         <div class="container" style="border:none;">
      
        <div>
+        <div>
+        <a href="/">Home </a>
         <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
         </div>
         <div>
@@ -70,7 +72,7 @@ var HTMLTemplate =`
         <div>
         ${content}
         </div>
-</html>`;
+    </html>`;
 return HTMLTemplate;
 }
 
