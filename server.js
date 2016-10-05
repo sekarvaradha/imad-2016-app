@@ -71,7 +71,16 @@ var HTMLTemplate =`
         <div>
         ${content}
         </div>
-    </html>`;
+        
+        <hr/>
+        <div>
+        Your Comments here :<textarea name="comment" id="comment"> </textarea>
+        <input type="submit" id ="comment-btn" value="Submit"><br>
+        <div id="show-comment" style="background-color:lightyellow;">     </div>
+ 
+        </div>
+        
+        </html>`;
 return HTMLTemplate;
 }
 
