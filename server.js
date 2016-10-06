@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
+/*var articles = {
  'article-one' :{
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
@@ -19,7 +19,6 @@ var articles = {
          <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
          </p>`
 },
-
  'article-two' :{
   title:'Article 2 ! SEGAR',
   heading:'Article-two',
@@ -30,7 +29,7 @@ var articles = {
           
         
 },
-   'article-three' :{
+ 'article-three' :{
     title:'Article 3 ! SEGAR',
     heading:'Article-three',
     date:'september,16 2016',
@@ -96,7 +95,7 @@ var counter = 0;
 app.get('/counter', function (req, res) {
    counter = counter + 1;
    res.send(counter.toString());
-});
+}); */
 
 var names = [];
 app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
