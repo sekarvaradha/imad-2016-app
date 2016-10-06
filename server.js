@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*var articles = {
+var articles = {
  'article-one' :{
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
@@ -105,7 +105,7 @@ app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
   names.push(name);
   // JSON: Javascript Object Notation
   res.send(JSON.stringify(names));
-}); */
+}); 
 
 var comment='';
 app.get('/submit-comment',function(req,res){
@@ -113,10 +113,10 @@ app.get('/submit-comment',function(req,res){
 res.send(comment);
 });
 
-/*app.get('/:articleName', function (req, res){
+app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
  res.send(createTemplate(articles[articleName]));
-   }); */
+   }); 
    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
