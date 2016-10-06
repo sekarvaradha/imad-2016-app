@@ -16,12 +16,9 @@ body {
 .bold {
     font-weight: bold;
 }
-
 .img-medium {
     height: 200px;
 }
-
-
 .container {
 width:800px;
 margin:0 auto;
