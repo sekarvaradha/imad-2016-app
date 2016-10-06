@@ -132,12 +132,15 @@ app.get('/ui/gmail.png', function (req, res) {
 app.get('/ui/git.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'git.png'));
 });
-app.get('/ui/gmail.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
+app.get('/ui/youtube.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'youtube.png'));
 });
 
 app.get('/ui/facebook.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'facebook.png'));
+});
+app.get('/ui/twitter.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'twitter.png'));
 });
 
 app.get('/ui/profile', function (req, res) {
