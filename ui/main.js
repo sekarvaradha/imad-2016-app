@@ -63,7 +63,7 @@ var submit =document.getElementById('submit-btn');
  
  // making comments
  
- var bttn=document.getElementById("comment-btn");
+/* var bttn=document.getElementById("comment-btn");
  bttn.onclick = function(){
  
  var request = new XMLHttpRequest();
@@ -81,7 +81,7 @@ var submit =document.getElementById('submit-btn');
          div.innerHTML= comment;
        }
   }
-}; 
+}; */
 
    // make the request
   
