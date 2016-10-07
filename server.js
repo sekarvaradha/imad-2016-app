@@ -107,11 +107,21 @@ app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
   res.send(JSON.stringify(names));
 }); 
 
-var comment='';
-app.get('/submit-comment',function(req,res){
-  comment=req.query.comment;
-res.send(comment);
+var comments=[];
+app.get('/submit_comment',function(req,res){
+    //to get the comments
+ var comment=req.query.comment;
+ comments.push(comment);
+ console.log('comments is: ',comments);
+ res.send(JSON.stringify(comments));
+
+    //to render those comments on the page
 });
+
+
+app.get('/ui/article.js',function(req,res){
+    res.sendFile(path.join(__dirname,'ui','article.js'));
+ });
 
 app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
