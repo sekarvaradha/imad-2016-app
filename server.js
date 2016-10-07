@@ -119,9 +119,13 @@ app.get('/submit_comment',function(req,res){
 });
 
 
-app.get('/ui/article',function(req,res){
+app.get('/article',function(req,res){
     res.sendFile(path.join(__dirname,'ui','article.js'));
  });
+ 
+ app.get('/profile', function(req,res){
+   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+   });
 
 /*app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
