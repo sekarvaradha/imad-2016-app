@@ -76,9 +76,11 @@ var HTMLTemplate =`
         
         <hr/>
         <div>
-        Your Comments here :<textarea name="comment" id="comment"> </textarea>
+        Your Comments here :<input type="text" name="comment" id="comment"> 
         <input type="submit" id ="comment-btn" value="Submit"><br><br>
-        <div id="show-comment" style="background-color:lightyellow;">     </div>
+        <ul id="show-comment" style="background-color:lightyellow;">     
+        
+        </ul>
          <br>
          <br> 
         </div>
