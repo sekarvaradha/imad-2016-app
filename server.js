@@ -4,7 +4,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-/*var articles = {
+var articles = {
  'article-one' :{
   title:'Article 1 ! SEGAR',
   heading:'Article-one',
@@ -85,7 +85,7 @@ var HTMLTemplate =`
         <script src="ui/main.js"></script>
         </html>`;
 return HTMLTemplate;
-}*/
+}
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -123,10 +123,10 @@ app.get('/submit_comment',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
    });
 
-/*app.get('/:articleName', function (req, res){
+app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
  res.send(createTemplate(articles[articleName]));
-   }); */
+  }); 
    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
