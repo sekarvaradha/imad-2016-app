@@ -73,7 +73,7 @@ var request = new XMLHttpRequest();
     if (request.status===200)
        { 
           alert("ok..ok");
-        var comment =request.responseText;
+        var comments =request.responseText;
         var comnts= JSON.parse(comments);
         var comlist=''
         for (var i=0;i<comnts.length;i++)
