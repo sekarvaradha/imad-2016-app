@@ -94,7 +94,7 @@ var request = new XMLHttpRequest();
    var comments=document.getElementById('comment');
    var txt =comment.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
-     request.send(null); 
+    request.send(null); 
 }; 
 
  
