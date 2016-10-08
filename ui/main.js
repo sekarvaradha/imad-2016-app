@@ -1,10 +1,8 @@
 // counter code
 
 var button=document.getElementById("counter");
-
 button.onclick = function(){
-
- var request = new XMLHttpRequest();
+var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
@@ -63,10 +61,9 @@ var submit =document.getElementById('submit-btn');
  
  // making comments
  
-/* var bttn=document.getElementById("comment-btn");
- bttn.onclick = function(){
- 
- var request = new XMLHttpRequest();
+var bttn=document.getElementById("comment-btn");
+bttn.onclick = function(){
+var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
@@ -76,12 +73,20 @@ var submit =document.getElementById('submit-btn');
        { 
           
         var comment =request.responseText;
-        var div =document.getElementById("show-comment");
+        var comnts= JSON.parse(comments);
+        var comlist=''
+        for (var i=0;i<names.length;i++)
+         {
+           comlist += '<li>' + comments[i] + '</li>';
+          
+             }
+	
+        var ul =document.getElementById("show-comment");
         div.style.color='red'; 
-         div.innerHTML= comment;
+         ul.innerHTML= comlist;
        }
   }
-}; */
+}; 
 
    // make the request
   
