@@ -89,9 +89,8 @@ var HTMLTemplate =`
 return HTMLTemplate;
 } 
 
-app.get('/',function(req,res){
-
-res.senFile(path.join(_dirname,'ui/load.html'));  
+app.get('/', function(req,res) {
+res.senFile(path.join(__dirname,'ui/load.html'));  
 });
 
 
