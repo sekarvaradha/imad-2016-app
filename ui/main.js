@@ -63,7 +63,7 @@ var submit =document.getElementById('submit-btn');
  
 var bttn=document.getElementById("comment-btn");
 bttn.onclick = function(){
-    alert("ok");
+    
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
@@ -72,14 +72,14 @@ var request = new XMLHttpRequest();
       // take some action
     if (request.status===200)
        { 
-          alert("ok..ok");
+        
         var comments =request.responseText;
         var comnts= JSON.parse(comments);
         var comlist=''
         for (var i=0;i<comnts.length;i++)
          {
            comlist += '<li>' + comnts[i] + '</li>';
-           alert(comlist);
+          
              }
 	
         var ul =document.getElementById("show-comment");
