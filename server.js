@@ -100,22 +100,21 @@ app.get('/counter', function (req, res) {
 var names = [];
 app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
   // Get the name from the request
-  var name = req.query.name;
-  
-  names.push(name);
-  // JSON: Javascript Object Notation
-  res.send(JSON.stringify(names));
+var name = req.query.name;
+names.push(name);
+// JSON: Javascript Object Notation
+res.send(JSON.stringify(names));
 }); 
 
 var comments=[];
 app.get('/submit_comment',function(req,res){
-    //to get the comments
- var comment=req.query.comment;
- comments.push(comment);
- console.log('comments is: ',comment);
+//to get the comments
+var comment=req.query.comment;
+comments.push(comment);
+//console.log('comments is: ',comment);
  res.send(JSON.stringify(comments));
 
-    //to render those comments on the page
+//to render those comments on the page
 });
 
  
@@ -123,10 +122,10 @@ app.get('/submit_comment',function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
    });
 
-app.get('/:articleName', function (req, res){
+/*app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
  res.send(createTemplate(articles[articleName]));
-  }); 
+  }); */
    
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
