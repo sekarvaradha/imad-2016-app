@@ -79,19 +79,18 @@ var request = new XMLHttpRequest();
         for (var i=0;i<comnts.length;i++)
          {
            comlist += '<li>' + comnts[i] + '</li>';
-          
+           alert(comlist);
              }
 	
         var ul =document.getElementById("show-comment");
-        div.style.color='red'; 
-         ul.innerHTML= comlist;
+        ul.innerHTML= comlist;
        }
   }
 }; 
 
    // make the request
   
-   var comments=document.getElementById('comment');
+   var comment=document.getElementById('comment');
    var txt =comment.value;
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
     request.send(null); 
