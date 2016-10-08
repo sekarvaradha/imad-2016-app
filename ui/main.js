@@ -76,9 +76,9 @@ var request = new XMLHttpRequest();
         var comment =request.responseText;
         var comnts= JSON.parse(comments);
         var comlist=''
-        for (var i=0;i<names.length;i++)
+        for (var i=0;i<comnts.length;i++)
          {
-           comlist += '<li>' + comments[i] + '</li>';
+           comlist += '<li>' + comnts[i] + '</li>';
           
              }
 	
