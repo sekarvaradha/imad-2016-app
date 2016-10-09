@@ -13,7 +13,8 @@ var request = new XMLHttpRequest();
            //alert("ok");
         var counter=request.responseText;
         var span=document.getElementById("count");
-         span.innerHTML=counter.toString();
+        span.style.background-color='white';
+        span.innerHTML=counter.toString();
        }
   }
 };
