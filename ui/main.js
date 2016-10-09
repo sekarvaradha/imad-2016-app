@@ -76,9 +76,10 @@ var request = new XMLHttpRequest();
         var comlist='';
         for (var i=0;i<comnts.length;i++)
          {
-           comlist += '<li>' + comnts[i] + '</li>';
-           var ul =document.getElementById("show-comment");
-           ul.innerHTML= comlist;
+           //comlist += '<li>' + comnts[i] + '</li>';
+           comlist += comnts[i] ;
+           var p =document.getElementById("show-comment");
+           p.innerHTML= comlist;
           }
         }
   }
