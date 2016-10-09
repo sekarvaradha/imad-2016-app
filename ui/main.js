@@ -41,12 +41,11 @@ submit.onclick = function() {
 	    var list='';
         for (var i=0;i<names.length;i++)
         {
-           list += '<li>' + names[i] + '</li>';
-          }
-	
-	 
-	     var ul = document.getElementById('namelist');
-         ul.innerHTML = list;
+          // list += '<li>' + names[i] + '</li>';
+            list +=  names[i];
+         }
+	    var p = document.getElementById('namelist');
+        p.innerHTML = list;
          }
    }        
   
@@ -77,7 +76,7 @@ var request = new XMLHttpRequest();
         for (var i=0;i<comnts.length;i++)
          {
            //comlist += '<li>' + comnts[i] + '</li>';
-           comlist += comnts[i] + '</br>' ;
+           comlist += comnts[i] ;
            var p =document.getElementById("show-comment");
            p.innerHTML= comlist;
           }
