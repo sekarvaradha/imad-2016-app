@@ -77,7 +77,7 @@ var request = new XMLHttpRequest();
         for (var i=0;i<comnts.length;i++)
          {
            //comlist += '<li>' + comnts[i] + '</li>';
-           comlist += comnts[i] ;
+           comlist += comnts[i] + '</br>' ;
            var p =document.getElementById("show-comment");
            p.innerHTML= comlist;
           }
