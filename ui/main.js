@@ -42,7 +42,7 @@ submit.onclick = function() {
         for (var i=0;i<names.length;i++)
         {
           // list += '<li>' + names[i] + '</li>';
-            list +=  names[i];
+            list +=  names[i] +'<br>';
          }
 	    var p = document.getElementById('namelist');
         p.innerHTML = list;
@@ -75,8 +75,8 @@ var request = new XMLHttpRequest();
         var comlist='';
         for (var i=0;i<comnts.length;i++)
          {
-           //comlist += '<li>' + comnts[i] + '</li>';
-           comlist += comnts[i] ;
+          //comlist += '<li>' + comnts[i] + '</li>';
+           comlist += comnts[i] + '<br>';
            var p =document.getElementById("show-comment");
            p.innerHTML= comlist;
           }
