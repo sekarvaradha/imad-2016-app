@@ -48,13 +48,13 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 a{
     color:khaki;
     font-family:sans-serif;
-    font-size:70%;
+    font-size:20px;
 }
 
 a::hover{
     color:orangered;
     font-family:sans-serif;
-    font-size:70%;
+    font-size:20px;
 }
 
 .orange{
