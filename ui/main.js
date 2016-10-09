@@ -25,7 +25,7 @@ var request = new XMLHttpRequest();
 // Name List Programme
 
 var submit =document.getElementById('submit-btn');
- submit.onclick = function() {
+submit.onclick = function() {
   
   var request = new XMLHttpRequest();
 // capture the response and store in a variable
@@ -62,7 +62,6 @@ var submit =document.getElementById('submit-btn');
  
 var bttn=document.getElementById("comment-btn");
 bttn.onclick = function(){
-    
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
@@ -74,16 +73,16 @@ var request = new XMLHttpRequest();
         
         var comments =request.responseText;
         var comnts= JSON.parse(comments);
-        var comlist=''
+        var comlist='';
         for (var i=0;i<comnts.length;i++)
          {
            comlist += '<li>' + comnts[i] + '</li>';
-             
-	    var ul =document.getElementById("show-comment");
-        ul.innerHTML= comlist;
-       }
+           var ul =document.getElementById("show-comment");
+           ul.innerHTML= comlist;
+          }
+        }
   }
-}; 
+};
 
    // make the request
   
