@@ -41,13 +41,13 @@ var submit =document.getElementById('submit-btn');
 	     var list='';
         for (var i=0;i<names.length;i++)
           {
-           list += '<li>' + names[i] + '</li>';
-          
+           //list += '<li>' + names[i] + '</li>';
+         list += names[i] + '<br/>
              }
 	
 	 
-	     var ul = document.getElementById('namelist');
-         ul.innerHTML = list;
+	     var div = document.getElementById('namelist');
+         div.innerHTML = list;
          }
    }        
   
@@ -78,12 +78,12 @@ var request = new XMLHttpRequest();
         var comlist=''
         for (var i=0;i<comnts.length;i++)
          {
-           comlist += '<li>' + comnts[i] + '</li>';
-          
+           //comlist += '<li>' + comnts[i] + '</li>';
+              comlist += comnts[i] + '<br/>';
              }
 	
-        var ul =document.getElementById("show-comment");
-        ul.innerHTML= comlist;
+        var div =document.getElementById("show-comment");
+        div.innerHTML= comlist;
        }
   }
 }; 
