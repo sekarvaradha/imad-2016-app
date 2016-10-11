@@ -133,6 +133,16 @@ app.get('/home', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'home.html'));
 });
 
+app.get('/email', function(req,res){
+res.sendFile(path.join(__dirname, 'ui', 'mail.html'));
+});
+  
+app.get('/ui/mail', function(req,res){
+res.sendFile(path.join(__dirname, 'ui', 'mail.js'));
+});
+   
+
+
 app.get('/part3', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
 });
