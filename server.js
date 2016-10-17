@@ -141,7 +141,7 @@ app.get('/ui/mail', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'mail.js'));
 });
    
-app.get('/ui/test.php', function(req,res){
+app.get('/test.php', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'test.php'));
 });
    
