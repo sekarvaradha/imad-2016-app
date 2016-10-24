@@ -14,7 +14,8 @@ var config ={
 };
 
 
-var pool = new ('config');
+var pool = new (config);
+
 app.get("/test-db", function (req,res){
     // make a select request
     // return a response with the result
