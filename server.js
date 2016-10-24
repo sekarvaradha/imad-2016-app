@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool =require('pg').pool;
+var pg =require('pg');
 var app = express();
 app.use(morgan('combined'));
 
@@ -12,7 +12,7 @@ var config ={
     port:"5432",
     password: process.env.DB_PASSWORD
 };
-var pool = new (config);
+var pool = new pg.Pool(config);
 
 app.get("/test-db", function (req,res){
     // make a select request
