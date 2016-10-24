@@ -14,21 +14,9 @@ var config ={
 };
 var pool = new pg.Pool(config);
 
-app.get("/test-db", function (req,res){
-    // make a select request
-    // return a response with the result
-    
-    pool.query("SELECT * FROM article",function (err, result){
-       if (err){
-           res.status(500).send (err.toString());
-          } else {
-              res.send(JSON.stringify(result.rows));
-          }
-          
-      });
-});
 
-/*var articles = {
+
+var articles = {
  'article-one' :{
   title:'Article1 ! SEGAR',
   heading:'Article-one',
@@ -112,13 +100,26 @@ var HTMLTemplate =`
         </html>`;
 return HTMLTemplate;
 } 
-*/
+
 
 /*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'load.html'));
 });
 */
 
+app.get("/test-db", function (req,res){
+    // make a select request
+    // return a response with the result
+    
+    pool.query("SELECT * FROM article",function (err, result){
+       if (err){
+           res.status(500).send (err.toString());
+          } else {
+              res.send(JSON.stringify(result.rows));
+          }
+          
+      });
+});
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
