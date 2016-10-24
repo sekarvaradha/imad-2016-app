@@ -12,8 +12,6 @@ var config ={
     port:"5432",
     password: process.env.DB_PASSWORD
 };
-
-
 var pool = new (config);
 
 app.get("/test-db", function (req,res){
@@ -165,10 +163,6 @@ res.sendFile(path.join(__dirname, 'ui', 'mail.html'));
   
 app.get('/ui/mail', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'mail.js'));
-});
-   
-app.get('/test.php', function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'test.php'));
 });
    
 
