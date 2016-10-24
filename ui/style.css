@@ -38,11 +38,11 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 
  .profile-photo {
     
-    height:200px;
-    width:200px;
+    height:100px;
+    width:100px;
     border-radius:50px;
     border:1px solid lightgrey;
-    text-align:center;
+    
     }
 
 a{
