@@ -89,10 +89,10 @@ var HTMLTemplate =`
 return HTMLTemplate;
 } 
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'load.html'));
 });
-
+*/
 
 app.get('/index', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
