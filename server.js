@@ -28,7 +28,7 @@ app.get("/test-db", function (req,res){
       });
 });
 
-var articles = {
+/*var articles = {
  'article-one' :{
   title:'Article1 ! SEGAR',
   heading:'Article-one',
@@ -112,6 +112,7 @@ var HTMLTemplate =`
         </html>`;
 return HTMLTemplate;
 } 
+*/
 
 /*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'load.html'));
