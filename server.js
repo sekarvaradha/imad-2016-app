@@ -30,7 +30,7 @@ app.get("/test-db", function (req,res){
 });
 
 
-var articles = {
+/*var articles = {
  'article-one' :{
   title:'Article1 ! SEGAR',
   heading:'Article-one',
@@ -164,7 +164,7 @@ app.get('/login',function(req,res){
           
       });
 })
- 
+
  app.get('/profile', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
    });
