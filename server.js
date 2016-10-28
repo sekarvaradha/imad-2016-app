@@ -155,7 +155,7 @@ comments.push(comment);
 var username="";
 var password="";
 app.get('/login',function(req,res){
- pool.query("SELECT * FROM login",function (err, result){
+ pool.query("SELECT * FROM login where username='&username' AND password='&password'",function (err, result){
        if (err){
            res.status(500).send (err.toString());
           } else {
