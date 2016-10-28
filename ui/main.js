@@ -116,7 +116,7 @@ var request = new XMLHttpRequest();
   
    var comment=document.getElementById('comment');
    var txt =comment.value;
-    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
+   // request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+username,  password=' +username, true);
     request.send(null); 
 }; 
 
