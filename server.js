@@ -155,6 +155,8 @@ comments.push(comment);
 var username="";
 var password="";
 app.get('/login',function(req,res){
+username=Document.getElementById('username');
+password=Document.getElementById('password');
  pool.query("SELECT * FROM login where username='&username' AND password='&password'",function (err, result){
        if (err){
            res.status(500).send (err.toString());
@@ -163,7 +165,7 @@ app.get('/login',function(req,res){
           }
           
       });
-})
+});
 
  app.get('/profile', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
