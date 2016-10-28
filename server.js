@@ -152,11 +152,9 @@ comments.push(comment);
 //to render those comments on the page
 });
 
-var username="";
-var password="";
 app.get('/login',function(req,res){
-username=Document.getElementById('username');
-password=Document.getElementById('password');
+var username=Document.getElementById('username');
+var password=Document.getElementById('password');
  pool.query("SELECT * FROM login where username='&username' AND password='&password'",function (err, result){
        if (err){
            res.status(500).send (err.toString());
