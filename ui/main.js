@@ -96,6 +96,7 @@ var request = new XMLHttpRequest();
 var bttn=document.getElementById("login-submit");
 bttn.onclick = function(){
 var request = new XMLHttpRequest();
+ alert ("ok");
     //create a request
  request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
@@ -103,15 +104,9 @@ var request = new XMLHttpRequest();
       // take some action
     if (request.status===200)
        { 
-        var comments =request.responseText;
-        var comnts= JSON.parse(comments);
-        var comlist='';
-        for (var i=0;i<comnts.length;i++)
-         {
-          //comlist += '<li>' + comnts[i] + '</li>';
-           comlist += comnts[i] + '<br>';
-           var p =document.getElementById("show-comment");
-           p.innerHTML= comlist;
+        var uname =equest.responseText;
+        alert ("ok");
+       
           }
         }
   }
