@@ -93,8 +93,8 @@ var request = new XMLHttpRequest();
 }; 
 
 
-var bttn=document.getElementById("login-submit");
-bttn.onclick = function(){
+var login=document.getElementById("login-submit");
+login.onclick = function(){
 var request = new XMLHttpRequest();
  alert ("ok");
     //create a request
@@ -114,10 +114,10 @@ var request = new XMLHttpRequest();
 
    // make the request
   
-   var comment=document.getElementById('comment');
-   var txt =comment.value;
-   // request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+username,  password=' +username, true);
-    request.send(null); 
+   //var comment=document.getElementById('comment');
+   //var txt =comment.value;
+  // request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+username,  password=' +username, true);
+    //request.send(null); 
 }; 
 
  
