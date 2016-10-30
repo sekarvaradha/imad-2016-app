@@ -30,7 +30,7 @@ app.get("/test-db", function (req,res){
 });
 
 
-var articles = {
+/*var articles = {
  'article-one' :{
   title:'Article1 ! SEGAR',
   heading:'Article-one',
@@ -113,7 +113,7 @@ var HTMLTemplate =`
         <script src="ui/main.js"></script>
         </html>`;
 return HTMLTemplate;
-} 
+} */
 
 
 /*app.get('/', function (req, res) {
@@ -153,8 +153,7 @@ comments.push(comment);
 });
 
 app.get('/login',function(req,res){
-var username=Document.getElementById('username');
-var password=Document.getElementById('password');
+
  pool.query("SELECT * FROM login",function (err, result){
        if (err){
            res.status(500).send (err.toString());
