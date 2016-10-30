@@ -152,17 +152,7 @@ comments.push(comment);
 //to render those comments on the page
 });
 
-app.get('/login',function(req,res){
 
- pool.query("SELECT * FROM login",function (err, result){
-       if (err){
-           res.status(500).send (err.toString());
-          } else {
-              res.send(JSON.stringify(result.rows));
-          }
-          
-      });
-});
 
  app.get('/profile', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
