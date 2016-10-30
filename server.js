@@ -187,13 +187,13 @@ pool.query("SELECT * FROM article WHERE title="+req.params.articleName, function
                 } 
            else {
                  var articleData=result.rows[0];
+                 res.send(createTemplate(articleData));
                 }
         }
     
     });
-});
 
-res.send(createTemplate(articleData));
+
 
 //res.send(createTemplate(articles[articleName]));
 });
