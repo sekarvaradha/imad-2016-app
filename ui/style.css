@@ -47,7 +47,7 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
     width:150px; 
     height:150px;
     margin-left:300px;
-    border:1px solid blue;
+    border:0px solid blue;
 }
 a{
     color:khaki;
