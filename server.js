@@ -89,7 +89,7 @@ var HTMLTemplate =`
         <div>
         
         <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
-        <a href="/"> Home </a>
+        <a href="/" style="color:maroon;"> Home </a>
         <hr>
         </div>
         <div>
