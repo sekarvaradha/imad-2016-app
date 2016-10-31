@@ -38,9 +38,9 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 
  .profile-photo {
     
-    height:100px;
-    width:100px;
-    border-radius:50px;
+    height:200px;
+    width:200px;
+    border-radius:100px;
     border:1px solid lightgrey;
     
     }
