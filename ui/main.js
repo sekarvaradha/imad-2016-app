@@ -95,10 +95,10 @@ var request = new XMLHttpRequest();
 
 var login=document.getElementById("login-submit");
 login.onclick = function(){
-var request = new XMLHttpRequest();
+//var request = new XMLHttpRequest();
  alert ("ok");
     //create a request
- request.onreadystatechange= function(){
+ /*request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
   {
       // take some action
@@ -109,7 +109,7 @@ var request = new XMLHttpRequest();
        
           }
         }
-  }
+  }*/
 };
 
    // make the request
