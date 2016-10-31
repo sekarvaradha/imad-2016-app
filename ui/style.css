@@ -46,6 +46,7 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
 .photo-container{
     width:120px; 
     height:120px;
+    margin-left:300px;
     border:1px solid blue;
 }
 a{
