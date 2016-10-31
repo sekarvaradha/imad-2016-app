@@ -41,10 +41,13 @@ td,th {padding:2px;font-family:sans-serif,helvetica;font-size:15px;}
     height:100px;
     width:100px;
     border-radius:50px;
-    border:1px solid lightgrey;
     
     }
-
+.photo-container{
+    width:120px; 
+    height:120px;
+    border:1px solid blue;
+}
 a{
     color:khaki;
     font-family:sans-serif;
@@ -57,11 +60,6 @@ a::hover{
     font-size:20px;
 }
 
-#menu-top{
-    width:800px;height:30px; 
-    border:1px solid red;
-    padding:3px;
-}
 
 
 .orange{
