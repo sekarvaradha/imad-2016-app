@@ -186,8 +186,6 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
     
     });
 
-
-
 //res.send(createTemplate(articles[articleName]));
 });
 
