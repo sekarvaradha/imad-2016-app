@@ -152,12 +152,10 @@ comments.push(comment);
 //to render those comments on the page
 });
 
-
-
  app.get('/profile', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
    });
-   
+  
 app.get('/home', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'home.html'));
 });
@@ -170,11 +168,6 @@ app.get('/ui/mail', function(req,res){
 res.sendFile(path.join(__dirname, 'ui', 'mail.js'));
 });
    
-
-app.get('/part3', function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
-
 app.get('/Articles/:articleName', function(req,res){
 //var articleName=req.params.articleName;
 pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", function(err,result){
@@ -203,7 +196,9 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-
+app.get('/mail',function(req,res){
+res.sendFile(path.join(_dirname,'ui','mail.html'));    
+});
 app.get('/ui/sekar.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'sekar.jpg'));
 });
