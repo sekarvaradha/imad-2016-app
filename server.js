@@ -221,7 +221,7 @@ app.get('/ui/twitter.png', function (req, res) {
 app.get('/ui/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
-app.get('/ui/test', function (req, res) {
+app.get('/test', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'test.php'));
 });
 
