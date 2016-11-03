@@ -105,10 +105,11 @@ var HTMLTemplate =`
         
         <hr/>
         <div>
-         <textarea  rows="2" cols="40" wrap="hard" id="comment" value="" placeholder="comment"></textarea>
-         <input type="submit" id ="comment-btn" value="Add"> <br>
-         <div id="show-comment" style="padding:10px;"> </div>
-         </div>
+        Your Comments here :<input type="text" name="comment" id="comment-article"> 
+        <input type="submit" id ="article-comment" value="Submit"><br><br>
+        <ul id="display-comment">     
+        
+        </ul>
          </div>
              <script type="text/javascript" src="/ui/main.js">
         </html>`;
@@ -143,6 +144,18 @@ res.send(JSON.stringify(names));
 
 var comments=[];
 app.get('/submit-comment',function(req,res){
+//to get the comments
+var comment=req.query.comment;
+comments.push(comment);
+//console.log('comments is: ',comment);
+ res.send(JSON.stringify(comments));
+
+//to render those comments on the page
+});
+
+
+var comments=[];
+app.get('/article-comment',function(req,res){
 //to get the comments
 var comment=req.query.comment;
 comments.push(comment);
