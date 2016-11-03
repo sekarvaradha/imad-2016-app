@@ -30,21 +30,6 @@ app.get("/test-db", function (req,res){
 });
 
 
-app.get("/login-test", function (req,res){
-    // make a select request
-    // return a response with the result
-  var username = req.query.username; 
-  //res.send(JSON.stringify(name));
-    pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
-       if (err){
-           res.status(500).send (err.toString());
-          } else {
-              res.send(JSON.stringify(result.rows));
-          }
-          
-      });
-});
-
 
 
 
@@ -206,6 +191,26 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
 
 //res.send(createTemplate(articles[articleName]));
 });
+
+
+app.get("/login-test", function (req,res){
+    // make a select request
+    // return a response with the result
+  var username = req.query.username; 
+  //res.send(JSON.stringify(name));
+    pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
+       if (err){
+           res.status(500).send (err.toString());
+          } else {
+              res.send(JSON.stringify(result.rows));
+          }
+          
+      });
+});
+
+
+
+
 
 
 app.get('/ui/style.css', function (req, res) {
