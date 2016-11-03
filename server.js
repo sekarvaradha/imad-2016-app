@@ -193,7 +193,7 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
 });
 
 
-app.get("/login-test", function (req,res){
+app.get("/login-test/:", function (req,res){
     // make a select request
     // return a response with the result
  // var username = req.query.username; 
