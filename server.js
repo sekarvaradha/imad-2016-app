@@ -105,15 +105,12 @@ var HTMLTemplate =`
         
         <hr/>
         <div>
-        Your Comments here :<input type="text" name="comment" id="comment"> 
-        <input type="submit" id ="comment-btn" value="Submit"><br><br>
-        <div id="show-comment" style="background-color:lightyellow;">     
-        
-        </div>
-         <br>
-         <br> 
-        </div>
-       <script type="text/javascript" src="/ui/main.js">
+         <textarea  rows="2" cols="40" wrap="hard" id="comment" value="" placeholder="comment"></textarea>
+         <input type="submit" id ="comment-btn" value="Add"> <br>
+         <div id="show-comment" style="padding:10px;"> </div>
+         </div>
+         </div>
+             <script type="text/javascript" src="/ui/main.js">
         </html>`;
 return HTMLTemplate;
 } 
