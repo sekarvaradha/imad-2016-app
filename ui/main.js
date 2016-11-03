@@ -95,10 +95,10 @@ var request = new XMLHttpRequest();
 
 var login=document.getElementById("login-submit");
 login.onclick = function(){
-//var request = new XMLHttpRequest();
+var request = new XMLHttpRequest();
  alert ("ok");
     //create a request
- /*request.onreadystatechange= function(){
+ request.onreadystatechange= function(){
  if (request.readyState === XMLHttpRequest.DONE)
   {
       // take some action
@@ -109,13 +109,13 @@ login.onclick = function(){
        
           }
         }
-  }*/
+  };
 
 
    // make the request
   
-   //var comment=document.getElementById('comment');
-   //var txt =comment.value;
+   var username=document.getElementById('username');
+   var txt =username.value;
 request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+username, true);
 request.send(null); 
 }; 
