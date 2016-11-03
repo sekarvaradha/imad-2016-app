@@ -110,7 +110,7 @@ login.onclick = function(){
           }
         }
   }*/
-};
+
 
    // make the request
   
