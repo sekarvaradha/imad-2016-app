@@ -113,11 +113,22 @@ var HTMLTemplate =`
          <br>
          <br> 
         </div>
-        <script src="ui/main.js"></script>
+       <script type="text/javascript" src="/ui/main.js">
         </html>`;
 return HTMLTemplate;
 } 
 
+
+
+app.get('/fetchcomments', function(req, res) {
+  var comment = req.query.comment;
+  if (comments != undefined){
+    res.send(JSON.stringify(comments));
+  }
+  else {
+    res.send("null");
+  }
+});
 
 /*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'load.html'));
