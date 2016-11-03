@@ -142,7 +142,7 @@ res.send(JSON.stringify(names));
 }); 
 
 var comments=[];
-app.get('/Articles/:submit-comment',function(req,res){
+app.get('/submit-comment',function(req,res){
 //to get the comments
 var comment=req.query.comment;
 comments.push(comment);
