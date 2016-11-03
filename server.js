@@ -33,9 +33,9 @@ app.get("/test-db", function (req,res){
 app.get("/login-test", function (req,res){
     // make a select request
     // return a response with the result
-  var name = req.query.username; 
-  res.send(JSON.stringify(name));
-    pool.query("SELECT * FROM login WHERE username='"+req.params.name +"'", function(err,result){
+  var username = req.query.username; 
+  //res.send(JSON.stringify(name));
+    pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
        if (err){
            res.status(500).send (err.toString());
           } else {
