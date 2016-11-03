@@ -116,17 +116,6 @@ return HTMLTemplate;
 } 
 
 
-
-app.get('/fetchcomments', function(req, res) {
-  var comment = req.query.comment;
-  if (comments != undefined){
-    res.send(JSON.stringify(comments));
-  }
-  else {
-    res.send("null");
-  }
-});
-
 /*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'load.html'));
 });
@@ -153,7 +142,7 @@ res.send(JSON.stringify(names));
 }); 
 
 var comments=[];
-app.get('/submit-comment',function(req,res){
+app.get('/Articles/submit-comment',function(req,res){
 //to get the comments
 var comment=req.query.comment;
 comments.push(comment);
