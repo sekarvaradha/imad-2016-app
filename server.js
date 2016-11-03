@@ -30,6 +30,23 @@ app.get("/test-db", function (req,res){
 });
 
 
+app.get("/login", function (req,res){
+    // make a select request
+    // return a response with the result
+    
+    pool.query("SELECT * FROM login where username='"+req.params.username +"'", function(err,result){
+       if (err){
+           res.status(500).send (err.toString());
+          } else {
+              res.send(JSON.stringify(result.rows));
+          }
+          
+      });
+});
+
+
+
+
 var articles = {
  'article-one' :{
   title:'Article1 ! SEGAR',
