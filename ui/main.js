@@ -1,6 +1,7 @@
 // counter code
 
 var button=document.getElementById("counter");
+if (button != undefined) {
 button.onclick = function(){
 var request = new XMLHttpRequest();
     //create a request
@@ -21,10 +22,11 @@ var request = new XMLHttpRequest();
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter', true);
      request.send(null);
 }; 
-
+}
 // Name List Programme
 
 var submit =document.getElementById('submit-btn');
+if (submit != undefined) {
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
@@ -57,12 +59,13 @@ submit.onclick = function() {
     request.send(null);
  }; 
  
- 
+} 
 // making comments
  
 var submit=document.getElementById("comment-btn");
+if (submit != undefined) {
 submit.onclick = function(){
-alert("ok");
+
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
@@ -92,9 +95,10 @@ var request = new XMLHttpRequest();
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-comment?comment=' +txt, true);
     request.send(null); 
 }; 
-
+}
 
 var login=document.getElementById("login-submit");
+if (login != undefined) {
 login.onclick = function(){
 var request = new XMLHttpRequest();
  alert ("ok");
@@ -120,7 +124,45 @@ var request = new XMLHttpRequest();
 request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+txt, true);
 request.send(null); 
 }; 
+}
+// article comments
 
+var buttn=document.getElementById("article-comment");
+if (buttn != undefined) {
+buttn.onclick = function(){
+
+var request = new XMLHttpRequest();
+    //create a request
+ request.onreadystatechange= function(){
+ if (request.readyState === XMLHttpRequest.DONE)
+  {
+      // take some action
+    if (request.status===200)
+       { 
+        
+        var comments =request.responseText;
+        var comnts= JSON.parse(comments);
+        var comlist='';
+        for (var i=0;i<comnts.length;i++)
+         {
+          //comlist += '<li>' + comnts[i] + '</li>';
+           comlist += comnts[i] + '<br>';
+           var p =document.getElementById("display-comment");
+           p.innerHTML= comlist;
+          }
+        }
+  }
+};
+
+   // make the request
+  
+   var comment=document.getElementById('comment-article');
+   var txt =comment.value;
+   request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/article-comment?comment=' +txt, true);
+   
+    request.send(null); 
+}; 
+} 
  
  
  
