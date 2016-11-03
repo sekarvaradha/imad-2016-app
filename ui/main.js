@@ -60,9 +60,9 @@ submit.onclick = function() {
  
 // making comments
  
-var bttn=document.getElementById("comment-btn");
-bttn.onclick = function(){
-    alert("ok");
+var submit=document.getElementById("comment-btn");
+submit.onclick = function(){
+alert("ok");
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
