@@ -201,7 +201,7 @@ app.get("/login-test", function (req,res){
     //pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
       pool.query("SELECT * FROM login WHERE id=" +req.params.id, function(err,result){
        if (err){
-           res.status(500).send (err.toString());
+           res.status(500).send (error.toString());
           } else {
               res.send(JSON.stringify(result.rows));
           }
