@@ -199,7 +199,7 @@ app.get("/login-test", function (req,res){
  // var username = req.query.username; 
   //res.send(JSON.stringify(name));
     //pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
-         pool.query("SELECT * FROM login", function(err,result){
+         pool.query("SELECT * FROM login WHERE id=2", function(err,result){
        if (err){
            res.status(500).send (err.toString());
           } else {
