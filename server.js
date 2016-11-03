@@ -30,7 +30,7 @@ app.get("/test-db", function (req,res){
 });
 
 
-app.get("/login", function (req,res){
+app.get("/login-test", function (req,res){
     // make a select request
     // return a response with the result
     
