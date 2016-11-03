@@ -107,9 +107,9 @@ var HTMLTemplate =`
         <div>
         Your Comments here :<input type="text" name="comment" id="comment"> 
         <input type="submit" id ="comment-btn" value="Submit"><br><br>
-        <ul id="show-comment" style="background-color:lightyellow;">     
+        <div id="show-comment" style="background-color:lightyellow;">     
         
-        </ul>
+        </div>
          <br>
          <br> 
         </div>
