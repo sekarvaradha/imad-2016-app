@@ -116,7 +116,7 @@ var request = new XMLHttpRequest();
   
    var username=document.getElementById('username');
    var txt =username.value;
-request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+username, true);
+request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login?username='+txt, true);
 request.send(null); 
 }; 
 
