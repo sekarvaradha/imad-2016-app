@@ -1,7 +1,7 @@
 // counter code
 
 var button=document.getElementById("counter");
-if (button != undefined) {
+if (button !== undefined) {
 button.onclick = function(){
 var request = new XMLHttpRequest();
     //create a request
@@ -26,7 +26,7 @@ var request = new XMLHttpRequest();
 // Name List Programme
 
 var submit =document.getElementById('submit-btn');
-if (submit != undefined) {
+if (submit !== undefined) {
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
