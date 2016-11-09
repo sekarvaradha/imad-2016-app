@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var pg =require('pg');
 var app = express();
+var crypto=require('crypto');
 app.use(morgan('combined'));
 
 var config ={
@@ -28,9 +29,6 @@ app.get("/test-db", function (req,res){
           
       });
 });
-
-
-
 
 
 var articles = {
@@ -220,8 +218,19 @@ app.get("/login-test", function (req,res){
 });
 
 
+// hash function
+function hash(input,salt){
+  //how do we create a hash?
+  var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+  return hashed.toString('hex');
+ }
 
 
+app.get('hash/:input',function(req,res){
+    
+    var hashedstring=hash(req.params.input,"this is some random string");
+    res.send(hashedstring);
+});
 
 
 app.get('/ui/style.css', function (req, res) {
@@ -248,6 +257,7 @@ app.get('/ui/youtube.png', function (req, res) {
 app.get('/ui/facebook.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'facebook.png'));
 });
+
 app.get('/ui/twitter.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'twitter.png'));
 });
