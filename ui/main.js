@@ -128,9 +128,9 @@ request.send(null);
 // article comments
 
 var buttn=document.getElementById("article-comment");
-if (buttn !== undefined) {
+if (buttn != undefined) {
 buttn.onclick = function(){
-alert("HI");
+alert ("Article comment")
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
