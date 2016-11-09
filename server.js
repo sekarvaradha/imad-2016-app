@@ -111,7 +111,7 @@ var HTMLTemplate =`
         
         </ul>
          </div>
-             <script type="text/javascript" src="/ui/main.js">
+             <script type="text/javascript" src="/ui/main.js"></script>
         </html>`;
 return HTMLTemplate;
 } 
