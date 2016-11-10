@@ -216,7 +216,7 @@ app.get('/hash/:input', function(req,res){
     res.send(hashedstring);
 });
 
-app.get('/createuser/:username/:password', function(req,res){
+app.get('/createuser/:username', function(req,res){
 //username, password
 var salt=crypto.randomBytes(128).toString('hex');
 var dbString= hash(input,salt);
