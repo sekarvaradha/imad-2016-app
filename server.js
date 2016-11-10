@@ -218,7 +218,7 @@ app.get('/hash/:input', function(req,res){
 
 app.get('/createuser/:username', function(req,res){
 //username, password
-var salt=crypto.randomBytes(128).toString('hex');
+var salt=crypto.getrandomBytes(128).toString('hex');
 var dbString= hash(input,salt);
 pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbString], function(err,result){
     if (err) {
