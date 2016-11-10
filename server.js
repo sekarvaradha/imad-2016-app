@@ -221,11 +221,12 @@ app.get("/login-test", function (req,res){
 // hash function
 function hash(input,salt){
   //how do we create a hash?
-  var hashed=crypto.pbkdf2Sync(input,'salt',10000,512,'sha512');
+  var hashed=crypto.pbkdf2Sync(input,'salt',10000,512,'sha512',(err, key) => {
+  if (err) throw err;
   
   return hashed.toString('hex');
- }
-
+ });
+}
 
 app.get('hash/:input', function(req,res){
     var hashedstring=hash(req.params.input,"this is some random string");
