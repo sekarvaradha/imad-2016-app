@@ -231,7 +231,20 @@ app.get('hash/:input', function(req,res){
     res.send(hashedstring);
 });
 
-
+app.get('/createuser', function(req,res){
+//username, password
+var salt=crypto.getRandomBytes(128).toString('hex');
+var dbString= hash(input,salt);
+pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbString], function(err,result){
+    if (err) {
+        res.status(500).send(err.toString());
+        } else {
+          res.send('user successfully created : ' +username);
+         }
+    
+});
+ 
+});
 
 
 app.get('/ui/style.css', function (req, res) {
