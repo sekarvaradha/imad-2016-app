@@ -202,22 +202,6 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
 });
 
 
-app.get("/login-test", function (req,res){
-    // make a select request
-    // return a response with the result
- 
-    pool.query("SELECT * FROM login WHERE username='"+req.params.username +"'", function(err,result){
-     // pool.query("SELECT * FROM login WHERE id=" +req.params.id, function(err,result){
-       if (err){
-           res.status(500).send (err.toString());
-          } else {
-              res.send(JSON.stringify(result.rows));
-          }
-          
-      });
-});
-
-
 // hash function
 function hash(input,salt){
   //how do we create a hash?
@@ -226,7 +210,7 @@ function hash(input,salt){
  
 }
 
-app.get('hash/:input', function(req,res){
+app.get('/hash/:input', function(req,res){
     var hashedstring= hash(req.params.input,"this is some random string");
     res.send(hashedstring);
 });
@@ -261,9 +245,11 @@ app.get('/ui/sekar.jpg', function (req, res) {
 app.get('/ui/gmail.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'gmail.png'));
 });
+
 app.get('/ui/git.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'git.png'));
 });
+
 app.get('/ui/youtube.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'youtube.png'));
 });
