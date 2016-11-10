@@ -216,11 +216,13 @@ app.get('/hash/:input', function(req,res){
     res.send(hashedstring);
 });
 
-app.get('/createuser/:username', function(req,res){
+app.get('/createuser/:username/:password', function(req,res){
 //username, password
 var username= req.params.username;
+var password= req.params.password;
+
 var salt=crypto.randomBytes(128).toString('hex');
-var dbString= hash(username,salt);
+var dbString= hash(password,salt);
 pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbString], function(err,result){
     if (err) {
         res.status(500).send(err.toString());
