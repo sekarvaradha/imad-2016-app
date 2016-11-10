@@ -219,17 +219,15 @@ app.get("/login-test", function (req,res){
 
 
 // hash function
-function hash(input,salt){
+function hash-func(input,salt){
   //how do we create a hash?
-  var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512',(err, key) => {
-  if (err) throw err;
-  
+  var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
   return hashed.toString('hex');
- });
+ 
 }
 
 app.get('hash/:input', function(req,res){
-    var hashedstring=hash(req.params.input,"this is some random string");
+    var hashedstring= hash-func(req.params.input,"this is some random string");
     res.send(hashedstring);
 });
 
@@ -266,9 +264,7 @@ app.get('/ui/twitter.png', function (req, res) {
 app.get('/ui/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
-app.get('/test', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'test.php'));
-});
+
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
