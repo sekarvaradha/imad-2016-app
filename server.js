@@ -4,7 +4,9 @@ var path = require('path');
 var pg =require('pg');
 var app = express();
 var crypto=require('crypto');
+var bodyParser= require('body-parser');
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var config ={
     user:"sekarvaradha",
@@ -152,7 +154,6 @@ comments.push(comment);
 //to render those comments on the page
 });
 
-
 var comments=[];
 app.get('/article-comment',function(req,res){
 //to get the comments
@@ -215,7 +216,7 @@ app.get('/hash/:input', function(req,res){
     res.send(hashedstring);
 });
 
-app.get('/createuser', function(req,res){
+app.get('/createuser/:username', function(req,res){
 //username, password
 var salt=crypto.getRandomBytes(128).toString('hex');
 var dbString= hash(input,salt);
