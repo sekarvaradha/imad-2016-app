@@ -169,17 +169,10 @@ comments.push(comment);
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
    });
   
-app.get('/home', function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'home.html'));
+app.get('/welcome', function(req,res){
+res.sendFile(path.join(__dirname, 'ui', 'welcome.html'));
 });
 
-app.get('/email', function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'mail.html'));
-});
-  
-app.get('/ui/mail', function(req,res){
-res.sendFile(path.join(__dirname, 'ui', 'mail.js'));
-});
    
 app.get('/Articles/:articleName', function(req,res){
 //var articleName=req.params.articleName;
