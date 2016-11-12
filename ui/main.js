@@ -110,10 +110,12 @@ var request = new XMLHttpRequest();
   {
       // take some action
       alert("ook");
+      alert(request.status);
+      
     if (request.status===200)
        { 
         	console.log("user loggedin");
-	alert("user successfully loggedin");
+	      alert("user successfully loggedin");
        
            } else if (request.status===403){
 	 alert ("userid/password is not correct");
