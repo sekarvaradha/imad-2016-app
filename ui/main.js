@@ -1,7 +1,9 @@
 // counter code
 
+// counter code
+
 var button=document.getElementById("counter");
-if (button !== undefined) {
+if (button != undefined) {
 button.onclick = function(){
 var request = new XMLHttpRequest();
     //create a request
@@ -20,13 +22,14 @@ var request = new XMLHttpRequest();
 };
    // make the request
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/counter', true);
+     
      request.send(null);
 }; 
 }
 // Name List Programme
 
 var submit =document.getElementById('submit-btn');
-if (submit !== undefined) {
+if (submit != undefined) {
 submit.onclick = function() {
   
   var request = new XMLHttpRequest();
@@ -54,7 +57,6 @@ submit.onclick = function() {
 };
     var nameInput=document.getElementById('name');
     var name1=nameInput.value;
-    
     request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/submit-name?name=' + name1 ,true);
     request.send(null);
  }; 
@@ -63,7 +65,7 @@ submit.onclick = function() {
 // making comments
  
 var submit=document.getElementById("comment-btn");
-if (submit !== undefined) {
+if (submit != undefined) {
 submit.onclick = function(){
 
 var request = new XMLHttpRequest();
@@ -97,8 +99,8 @@ var request = new XMLHttpRequest();
 }; 
 }
 
-var login=document.getElementById("login-submit");
-if (login !== undefined) {
+var login=document.getElementById("submit-login");
+if (login != undefined) {
 login.onclick = function(){
 var request = new XMLHttpRequest();
  alert ("ok");
@@ -107,31 +109,43 @@ var request = new XMLHttpRequest();
  if (request.readyState === XMLHttpRequest.DONE)
   {
       // take some action
+      alert("ook");
     if (request.status===200)
        { 
-        var uname =equest.responseText;
-        alert ("ok");
+        	console.log("user loggedin");
+	alert("user successfully loggedin");
        
-          }
+           } else if (request.status===403){
+	 alert ("userid/password is not correct");
+            } else if (request.status===500) {
+	alert ("something went wrong on the server");
+                 }
+	
         }
   };
 
 
    // make the request
-  
-   var username=document.getElementById('username');
-   var txt =username.value;
-request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login-test?username=' +txt, true);
-request.send(null); 
-}; 
 
+   var username=document.getElementById('username').value;
+  var password=document.getElementById('password').value;
+ alert(username);
+  console.log(username);
+  console.log(password);
+
+request.open('POST', 'http://sekarvaradha.imad.hasura-app.io/login', true);
+//request.open('POST', 'http://localhost:8080/login', true);
+request.setRequestHeader('Content-Type','application/json');
+request.send(JSON.stringify({username:username,password:password})); 
+}; 
 }
+
 // article comments
 
 var buttn=document.getElementById("article-comment");
-if (buttn !== undefined) {
+if (buttn != undefined) {
 buttn.onclick = function(){
-alert ("Article comment")
+
 var request = new XMLHttpRequest();
     //create a request
  request.onreadystatechange= function(){
@@ -158,12 +172,10 @@ var request = new XMLHttpRequest();
    // make the request
   
    var comment=document.getElementById('comment-article');
+   
    var txt =comment.value;
    request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/article-comment?comment=' +txt, true);
-   
+   //request.open('GET', 'http://localhost:8080/article-comment?comment=' +txt, true);
     request.send(null); 
 }; 
 } 
- 
- 
- 
