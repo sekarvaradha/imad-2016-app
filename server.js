@@ -232,8 +232,10 @@ pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbStr
 app.get('/login', function (req,res) {
 var username=req.body.username;
 var password=req.body.password;
-
-pool.query('SELECT * FROM login WHERE username=$1',[username], function(err,result){
+console.log("in the server");
+console.log(username);
+console.log(password);
+pool.query('SELECT * FROM login WHERE username = $1',[username], function(err,result){
     if (err) {
         res.status(500).send(err.toString());
    } else {
