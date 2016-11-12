@@ -99,9 +99,9 @@ var request = new XMLHttpRequest();
 }; 
 }
 
-var login=document.getElementById("submit-login");
-if (login != undefined) {
-login.onclick = function(){
+var submitbtn=document.getElementById("submit-login");
+if (submitbtn != undefined) {
+submitbtn.onClick = function(){
 var request = new XMLHttpRequest();
  alert ("ok");
     //create a request
@@ -131,13 +131,11 @@ var request = new XMLHttpRequest();
 
   var username=document.getElementById('username').value;
   var password=document.getElementById('password').value;
-  alert(username);
-  alert(password);
+  
   console.log(username);
   console.log(password);
 
 request.open('POST', 'http://sekarvaradha.imad.hasura-app.io/login', true);
-
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password})); 
 };  
