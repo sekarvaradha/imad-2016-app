@@ -101,7 +101,7 @@ var request = new XMLHttpRequest();
 
 var submitbtn=document.getElementById("submit-login");
 if (submitbtn != undefined) {
-submitbtn.onClick = function(){
+submitbtn.onclick = function(){
 var request = new XMLHttpRequest();
  alert ("ok");
     //create a request
