@@ -207,7 +207,7 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
 function hash(input,salt){
   //how do we create a hash?
   var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
- return ['pbkdf2','10000',salt,hashed.toString('hex').join('$')];
+ return ['pbkdf2','10000',salt,hashed.toString('hex')].join('$');
  
 }
 
