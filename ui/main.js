@@ -136,7 +136,7 @@ var request = new XMLHttpRequest();
   console.log(username);
   console.log(password);
 
-request.open('GET', 'http://sekarvaradha.imad.hasura-app.io/login', true);
+request.open('POST', 'http://sekarvaradha.imad.hasura-app.io/login', true);
 
 request.setRequestHeader('Content-Type','application/json');
 request.send(JSON.stringify({username:username,password:password})); 
