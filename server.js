@@ -234,6 +234,37 @@ pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbStr
  
 });
 
+// login endpoint
+
+app.get('/login', function (req,res) {
+var username=req.body.username;
+var password=req.body.password;
+pool.query('SELECT * FROM login WHERE username=$1',[username],function(err,result){
+    if (err) {
+        res.status(500).send(err.toString());
+   } else {
+          	if(result.rows.length===0) {
+		                   res.send(403).send("username /password is invalid");
+	                } else {
+
+	          // match password
+	                 	var dbString=result.rows[0].password;
+	        	        var salt =dbString.split('$')[2];
+		                var hashedpassword= hash(password,salt);
+
+	                  if (hashedpassword===dbString) {
+	        
+		                    res.send('Credentials correct');
+	                      }
+	                     else {
+	        	            res.send(403).send("username /password is invalid");
+	                    	}
+	                   }	
+        }
+});
+
+});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
