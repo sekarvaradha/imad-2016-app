@@ -33,44 +33,11 @@ app.get("/test-db", function (req,res){
 });
 
 
-var articles = {
- 'article-one' :{
-  title:'Article1 ! SEGAR',
-  heading:'Article-one',
-  date:'september,5 2016',
-  content:`
-        <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-         </p>
-          
-        <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-         </p>
-          
-         <p> This is my first article. This is my first article.This is my first article This is my first article.This is my first article.This is my first articleThis is my first article.
-         </p>`
-},
- 'article-two' :{
-  title:'Article2 ! SEGAR',
-  heading:'Article-two',
-  date:'september,10 2016',
-  content:`
-  <p> This is my second article. This is my second article.
-  </p>`
-          
-        
-},
- 'article-three' :{
-    title:'Article3 ! SEGAR',
-    heading:'Article-three',
-    date:'september,16 2016',
-    content:`
-    <p> This is my third article. 
-    </p>`
-     }
-};
 
 function createTemplate (data) {
      var title= data.title;
      var date=data.date;
+     
      var heading=data.heading;
      var content=data.content;
      
@@ -81,32 +48,38 @@ var HTMLTemplate =`
        ${title}
       </title>
       <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <link href="/ui/style.css" rel="stylesheet" />
+       <link href="/ui/style.css" rel="stylesheet" />
       
     </head>
     
     <body>
-        <div class="container" style="border:none;">
+    <div id="article_container" style="border:none;">
      
        <div>
         <div>
         
         <h2 style="color:navy;text-align:center;"> <b>${heading}</b> </h2>
-        <a href="/" style="color:maroon;"> Home </a>
+        
+
+        <a href="/list-article"  style="color:maroon;"> Home </a>
         <hr>
         </div>
         <div>
+       
+
+        <div style="text-align:right">
         ${date.toDateString()}
         </div>
         <hr>
-        <div>
+        <div id="content">
         ${content}
         </div>
         
         <hr/>
         <div>
-        Your Comments here :<input type="text" name="comment" id="comment-article"> 
-        <input type="submit" id ="article-comment" value="Submit"><br><br>
+        Comments :
+        <textarea  rows="4" cols="40"  id="comment-article" style="border:1px groov blue;"> </textarea><br>
+        <input type="submit" id ="comment-submit" value="Submit Comment" style="width:220px;height:30px;background:maroon;color:white;margin-left:120px;"><br><br>
         <ul id="display-comment">     
         
         </ul>
@@ -134,36 +107,6 @@ app.get('/counter', function (req, res) {
    res.send(counter.toString());
 }); 
 
-var names = [];
-app.get('/submit-name', function(req, res) { // /submit-name?name=xxxx
-  // Get the name from the request
-var name = req.query.name;
-names.push(name);
-// JSON: Javascript Object Notation
-res.send(JSON.stringify(names));
-}); 
-
-var comments=[];
-app.get('/submit-comment',function(req,res){
-//to get the comments
-var comment=req.query.comment;
-comments.push(comment);
-//console.log('comments is: ',comment);
- res.send(JSON.stringify(comments));
-
-//to render those comments on the page
-});
-
-var comments=[];
-app.get('/article-comment',function(req,res){
-//to get the comments
-var comment=req.query.comment;
-comments.push(comment);
-//console.log('comments is: ',comment);
- res.send(JSON.stringify(comments));
-
-//to render those comments on the page
-});
 
  app.get('/profile', function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
