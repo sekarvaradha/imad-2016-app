@@ -4,11 +4,12 @@
 <style>
 .container {
 width:800px;
-//height:500px;
-margin:0 auto;
+//height:600px;
+//margin:0 auto;
 background-color:teal;
 border:1px solid gold;
-border-top:40px solid goldenrod;
+border-top:1px solid goldenrod;
+border-top:40px solid maroon;
 border-bottom:40px solid goldenrod;
 }
 
@@ -16,7 +17,7 @@ ul,li {
       list-style-type:none;
       text-decoration:none;
       font-family :sans-serief, Helvetica;
-      font-size:16px;
+      font-size:22px;
       padding-left:1px;
       float: left;
       display:inline-block;
@@ -39,6 +40,7 @@ a { text-decoration :none;
      margin-top:4px;
      margin-left:250px;
  }
+
  p {
      margin-left:20px;
      font-family :helvetica;
@@ -51,41 +53,80 @@ a { text-decoration :none;
      border:1px solid red;
      background-color:#2f2f2f2f;
  }
- 
- .photo-container{
-    width:150px; 
-    height:140px;
-    margin-left:330px;
-    border:0px solid blue;
-}
+          
+.logout { width:800px; height:40px;
+           //border:1px solid maroon;
+           margin-top:-80px;
+           font-family:helvetica;
+            color:honeydew;
+            font-size:18px;
+            text-decoration:none;
+         
+       }
 
+	
 #main-menu{
-    margin-top:-90px;
+    margin-top:0px;
     margin-left:120px;
     color:lightcyan;
     margin-bottom:40px;
 } 
-</style>   
-</head>
-<body>      
-<div class="container">
+#one {
+            font-size:18px;
+            color:honeydew;
+           text-decoration:none;
+           background:maroon;
+           margin-left:650px;
+          background:black;
+        }
+
+</style>  
+
+<!--- getting the parameter passed through URL --->
+
+<script language="JavaScript">
+  function processUser()
+  {
+   
+    var parameters = location.search.substring(1).split("&");
+
+    var temp = parameters[0].split("=");
+   var name = unescape(temp[1]);
+   // temp = parameters[1].split("=");
+   // p = unescape(temp[1]);
+  // alert("HI"+name);
+   document.getElementById("user").innerHTML = name;
+    //document.getElementById("pass").innerHTML = p;
+  }
+</script>
+
  
+</head>
+
+
+<body onload="processUser()">    
+ 
+ <div class="container">
+<div class="logout">
+<span id="user">   </span>
+<a id="one" href="/logout" >logout</a>
+</div>
+
 <div id="main-menu">
 <ul>
 <li> <a href="profile" target="_blank">Profile |</a></li> 
-<li> <a href="Articles/article-one" target="_blank">Article One |</a></li>  
-<li> <a href="Articles/article-two" target="_blank">Article Two |</a></li> 
-<li> <a href="Articles/article-three" target="_blank">Article Three |</a></li> 
+<li> <a href="list-article" target="_blank">List Articles |</a></li>  
 <li> <a href="/" target="_blank">Home</a></li> 
 </ul>
 </div>
 
-<div class="photo-container">
-<center><img src="/ui/sekar.jpg" class="profile-photo"> </center>
+<div >
+<center><img src="/ui/images/Gandhi.jpg"  width="700" height="300" border="2" align="center"> </center>
 </div>
+
 <br>
 <div>
-<center><Label style="font-face:Sans-serif;font-size:26px;color:white;">Hi!  I am Sekar & this is my Webapp </label> </center>
+<center><Label style="font-face:Sans-serif;font-size:26px;color:white;">Welcome to RedTiger Blog..! </label> </center>
 <hr>
 
  <h3 style="text-align:left;"> Personal </h3>
@@ -101,21 +142,8 @@ Working as Librarian
 <!--- This button <button id="counter"> Click Me </button> has been clicked  <span id="count"> 0  </span> Times -->
  <button id="counter" style ="margin-left:300px;"> Like </button> <span id="count" style="margin-left:30px;margin-right:5px;color:white;"> 0 </span> Likes
  <br>
- <hr>
- Add Names 
-<input type="text" id ="name" placeholder="name"> 
-<input type ="submit" id="submit-btn" value="Add">
- <p id="namelist" style="display:block;">  </p>
-</div>
-<hr>
-<div> 
-<label style="font-size:15px;"> Your Comments here </label>
+<br><hr> 
 
-<!--- Your Comments here :<input type="text" id="comment"  placeholder="comment">  -->
-<textarea  rows="2" cols="40" wrap="hard" id="comment" value="" placeholder="comment">  </textarea>
- <input type="submit" id ="comment-btn" value="Add"> <br>
- <div id="show-comment" style="padding:10px;"> </div>
-</div>
 
 <div> 
 <!--- <label style="font-size:18px; color:navy;">Follow us </label> -->
