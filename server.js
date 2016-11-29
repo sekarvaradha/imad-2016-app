@@ -139,6 +139,78 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.articleName +"'", fu
 });
 
 
+app.post('/submit-comment/:articleName', function (req, res) {
+  
+ // Check if the user is logged in
+    
+if (req.session && req.session.auth && req.session.auth.userId) 
+{
+        
+// First check if the article exists and get the article-id
+        
+pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
+           
+	 if (err) {
+               
+	 	res.status(500).send(err.toString());
+           
+ 	                } 
+	else {
+               
+	             if (result.rows.length === 0) 
+		{
+                    
+	                    res.status(400).send('Article not found');
+                
+	                 } 
+	      else {
+                    
+	var articleId = result.rows[0].id;
+                    
+  	 // Now insert the right comment for this article
+                   
+ 	pool.query(
+"INSERT INTO comment (article_id, user_id,comment) VALUES ($1, $2, $3)",
+  [articleId, req.session.auth.userId,req.body.comment],
+  function (err, result) {
+
+                            
+	      if (err) {
+                    res.status(500).send(err.toString());
+                           
+	       } else {
+                                
+		res.status(200).send('Comment inserted!')
+                  }
+        });
+    }
+   }
+}); 
+} else {
+      res.status(403).send('Only logged in users can comment');
+    }
+});
+
+
+              
+app.post('/save-article', function(req,res){
+var title=req.body.title;
+var tdate=req.body.date;
+var heading =req.body.heading;
+var content= req.body.content;
+
+ pool.query('INSERT INTO article (title,content,date,heading) VALUES ($1,$2,$3,$4)',[title,content,tdate,heading], function(err,result){
+    if (err) {
+              res.status(500).send(err.toString());
+            } 
+     else {
+                 res.status(200).send('Article saved!')
+      }
+});
+      
+});
+
+
 // hash function
 function hash(input,salt){
   //how do we create a hash?
@@ -201,6 +273,49 @@ pool.query('SELECT * FROM login WHERE username=$1',[username], function(err,resu
 });
 
 });
+
+
+app.post('/register', function(req,res){
+//username, password
+var fname=req.body.fname;
+var lname=req.body.lname;
+var email =req.body.email;
+var username= req.body.username;
+var password= req.body.password;
+
+var salt=crypto.randomBytes(128).toString('hex');
+var dbString= hash(password,salt);
+pool.query('SELECT * FROM register WHERE email=$1', [email], function(err,result){
+
+  if (err) {
+	res.status(500).send(err.toString());
+               } 
+    else  if (result.rows.length!=0) {
+                                res.status(404).send ('This email is already Registered');
+        }  else {
+pool.query('INSERT INTO register (fname, lname,email,username,password) VALUES ($1,$2,$3,$4,$5)',[fname,lname,email,username,dbString], function(err,result){
+    if (err) {
+              res.status(500).send(err.toString());
+            } 
+   else {
+             pool.query('INSERT INTO login (username,password) VALUES ($1,$2)', [username,password], function(err,result){
+	if(err){
+	      res.status(500).send(err.toString());
+                       }
+	 else{
+    res.send('User successfully Registered : ' +username);
+         }
+     });
+       }
+    
+});
+ 
+}
+
+});
+
+});
+
 
 
 app.get('/ui/style.css', function (req, res) {
