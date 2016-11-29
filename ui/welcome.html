@@ -9,66 +9,83 @@ height:40px;
 background:navy;
 }
 .author{
-width:200px;
+width:230px;
 height:120px;
-margin-top:-160px;
-margin-left:50px;
+margin-top:-80px;
+margin-left:10px;
 border:1px solid black;
 background:honeydew;
 font-family:sans-serif,helvetica;
 font-size:16px;
 color:navy;
-padding:10px;
-border-radius:10px 30px;
+padding:10px;padding-left:30px;
+border-radius:30px;
 }
 
 .blog{
-width:30%;
-height:250px;
+width:95%;
+height:70px;
 margin-left:10px;
-border:0px solid maroon;
-border-radius:50px ;
+margin-top:-10px;
+border:1px solid maroon;
 background:honeydew;
-padding-top:10px; padding-left:10px;
-border-top:10px;
+padding-top:5px; padding-left:10px;
+
 }
+
+.container{
+width:600px;
+height:45f0px;
+border:1px solid grey;
+border-radius:10px;
+padding:5px;
+//background:white;
+}
+
 
 .login {
+width:270px;
+height:140px;
+margin-left:220px;
+margin-top:10px;
+padding:2px;
+font-size:11px;
+//background:white;
+color:blue;
 
-width:300px;
-height:170px;
-margin-left:680px;
-margin-top:-200px;
-border:1px solid olive;
-padding:5px;
-border-top:10px solid olive;
-background:white;
-color:black;
-margin-bottom:20px;
 }
 
-p{
-   font-family:arial, helvetica;
-   font-size:14px;
-   }
+#photo {
+width:100px;
+height:100px;
+margin-left:400px;
+border-radius:50px;
+}
+
+body { background:url(ui/b2.jpg) repeat;}
+
+
 a {
-      text-decoration:none;
-      color:navy;
-      font-size:12px;
+      text-decoration:underline;
+      color:blue;
+      font-size:11px;
   }
 
-</style>   
+</style>  
+
+ 
+ 
 </head>
-<body bgcolor=lightgrey>      
 
-<div class="top">
-<center><h2 style="color:white"> Welcome to My Webapp </h2></center>
-</div>
-<br><br><br><bt>
-<div class="center">
-<center>	<img src="/ui/sekar.jpg"  height=200 border=1> </center>
+<body>  
+  
+<div>
+<center> <br>
+<h1 style="color:maroon;"> SHAD BLOG Welcomes  You..</h1></center>
 </div>
 
+<div class="container">
+<img src="/ui/sekar.jpg" id="photo"> 
 <div class="author">
 <br>
 <label> <b> Name :</b> <i> Sekarvaradha</i></label> <br><br>
@@ -76,41 +93,6 @@ a {
 <label><b>Profession :</b><i> School Librarian</i><label>
 </div>
 <br>
-<div class="login">
-<table width=100% cellpadding="2" cellspacing=2; border=1 align=center>
-<tr> 
-<td colspan=2 align=center> Login </td>
-</tr>
-<tr></tr>
-<tr>
-<td><label> Username</label></td>
-<td><input type="text" id="username" placeholder="username" size=20 maxlength=20></td>
-</tr>
-
-<tr>
-<td><label> Password</label></td>
-<td><input type="password" id="password" value="" size=20 maxlength=20></td>
-</tr>
-<tr>
-<td colspan=2 align=center> 
-<input type="submit" id="submit-login" value="submit">
-<input type="reset" id="reset-login" value="reset">
- </td>
-</tr>
-
-<tr>
-<td colspan=2 align=center> 
-<a href="#">Register Now   |  </a>
-<a href="#">Forget Password ?</a>
-</td>
-</tr>
-</table>
-
-</div>
-
-<div>
-<center><h2> My Web App is something Awesome ! </h2></center>
-</div>
 
 <div class="blog">
 <p> My Webapp is basically a blog where you can view many post..
@@ -118,9 +100,43 @@ You can post your own and comments. This blog will be useful for
 your profession and joyful.</p>
 </div>
 
+
+<div class="login">
+<table width=100% cellpadding="2" cellspacing=2; border="0" align=center>
+<tr> 
+<td colspan=2 align=center> Login </td>
+</tr>
+<tr>
+<td><label style="font-size:12px;"> Username</label></td>
+<td><input type="text" id="username" value="" size=20 maxlength=20 placeholder="username"></td>
+</tr>
+
+<tr>
+<td><label style="font-size:12px;"> Password</label></td>
+<td><input type="password" id="password" value="" size=20 maxlength=20></td>
+</tr>
+<tr> 
+<td colspan=2 align=center> 
+<input type="submit" id="submit-login" value="submit" style="background-color:teal;color:white;width:60px;">
+<input type="reset" id="reset-login" value="reset" style="background-color:teal;color:white;width:60px;"> 
+ </td>
+</tr>
+
+<tr>
+<td colspan=2 align=center> 
+<a href="http://localhost:8080/register">Register Now   |  </a>
+<a href="#">Forget Password ? </a>
+</td>
+</tr>
+</table>
+
+</div>
+
 <div class="footer">
 
 </div>
-<script type="text/javascript" src="/ui/main.js"></script>
+
+</div>
+<script src="/ui/main.js"></script>
 </body>
-</html>
+</html
