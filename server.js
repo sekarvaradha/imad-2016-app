@@ -316,6 +316,18 @@ pool.query('INSERT INTO register (fname, lname,email,username,password) VALUES (
 
 });
 
+app.get('/list-article', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'list-article.html'));
+});
+
+app.get('/new-article', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'New-Article.html'));
+});
+
+
+app.get('/register', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'register.html'));
+});
 
 
 app.get('/ui/style.css', function (req, res) {
