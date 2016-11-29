@@ -317,7 +317,7 @@ pool.query('INSERT INTO register (fname, lname,email,username,password) VALUES (
 });
 
 app.get('/list-article', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'list-article.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'list-artilce.html'));
 });
 
 app.get('/new-article', function (req, res) {
