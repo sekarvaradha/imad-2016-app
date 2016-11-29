@@ -244,7 +244,7 @@ pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbStr
 
 // login endpoint
 
-app.get('/login', function (req,res) {
+app.post('/login', function (req,res) {
 var username = req.body.username;   
 var password = req.body.password;
 
