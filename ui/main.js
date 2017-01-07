@@ -317,3 +317,40 @@ request.send(JSON.stringify({title:title,content:content,date:tdate, heading:hea
 
 }; 
 } 
+
+function loggedinUser()
+{
+      var request=new XMLHttpRequest();
+    request.onreadystatechange=function()
+    {
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            if(request.status===200)
+            {
+                var Records = JSON.parse(request.responseText);
+	//var user=request.responseText;
+                var usertxt=document.getElementById('logged');
+                 var user=Records[0].username;
+               
+                console.log(user);             
+               utext=`Logged in As  :  `+ user;
+               //utext+=`<a id="one" href="/" onclick="return logout();">Log Out</a>`;
+              usertxt.innerHTML=utext;
+                  
+           }
+          
+            else
+              {
+                alert (" SORRY ! You are not logged In User... Please Login");
+                window.location.href="/"
+               }
+
+        }
+        
+    };
+
+request.open('GET', '/check-login');
+request.send(null);
+      
+}
+
