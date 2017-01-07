@@ -141,7 +141,7 @@ var request = new XMLHttpRequest();
        { 
         	console.log("user loggedin");
 	//alert("user successfully loggedin");
-	window.location.href = "/ui/list-article";
+	window.location.href = "/list-article";
        
            } else if (request.status===403){
 	 alert ("userid/password is not correct");
