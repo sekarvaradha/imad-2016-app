@@ -224,26 +224,7 @@ app.get('/hash/:input', function(req,res){
     res.send(hashedstring);
 });
 
-app.get('/createuser/:username/:password', function(req,res){
-//username, password
-var username= req.params.username;
-var password= req.params.password;
-
-var salt=crypto.randomBytes(128).toString('hex');
-var dbString= hash(password,salt);
-pool.query('INSERT INTO login(username,password) VALUES ($1,$2)',[username,dbString], function(err,result){
-    if (err) {
-        res.status(500).send(err.toString());
-        } else {
-          res.send('user successfully created : ' +username);
-         }
-    
-});
- 
-});
-
 // login endpoint
-
 app.post('/login', function (req,res) {
 var username = req.body.username;   
 var password = req.body.password;
@@ -355,12 +336,6 @@ res.send('<script>window.location.href="/" </script>');
 //res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
 
 });
-
-
-
-
-
-
 
 app.get('/list-article', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'list-artilce.html'));
