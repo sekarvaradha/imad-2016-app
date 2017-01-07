@@ -316,6 +316,52 @@ pool.query('INSERT INTO register (fname, lname,email,username,password) VALUES (
 
 });
 
+app.get('/check-login', function (req, res) {
+  
+ if (req.session && req.session.auth && req.session.auth.userId) {
+       
+// Load the user object
+       
+pool.query('SELECT * FROM login WHERE id = $1', [req.session.auth.userId], function (err, result) {
+          
+         if (err) {
+             
+	 res.status(500).send(err.toString());
+          
+           } else {
+              
+	 res.send(JSON.stringify(result.rows));
+  
+                  
+              }
+      
+    });
+  
+     } else {
+       
+	res.status(400).send('You are not logged in');
+   
+ }
+
+});
+
+
+app.get('/logout', function (req, res) {
+   
+delete req.session.auth;
+   
+console.log("logged out");
+res.send('<script>window.location.href="/" </script>');
+//res.send('<html><body>Logged out!<br/><br/><a href="/">Back to home</a></body></html>');
+
+});
+
+
+
+
+
+
+
 app.get('/list-article', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'list-artilce.html'));
 });
