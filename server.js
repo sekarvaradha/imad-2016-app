@@ -4,6 +4,8 @@ var path = require('path');
 var pg =require('pg');
 var app = express();
 var crypto=require('crypto');
+var mailer =require('nodemailer');
+
 var bodyParser= require('body-parser');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -32,7 +34,60 @@ app.get("/test-db", function (req,res){
       });
 });
 
+app.get("/sendmail", function (req,res){
+ var html = '<form action="/mail" method="post">' +
+        'Enter Email id:' +
+        '<input type="text" name="userEmail"placeholder="Email" />' +
+        '<br>' +
+        '<button type="submit">Submit</button>' +
+        '</form>';
 
+    res.send(html);
+});
+   
+app.post('/mail', function(req, res) {
+    var userEmail = req.body.userEmail;
+
+    var smtpTransport= mailer.createTransport("SMTP",{
+	//host: 'smtp.gmail.com',
+	  host:'http://sekarvaradha.imad.hasura-app.io/',
+        secureConnection: false,
+        port: 587,
+	service :"Gmail",
+   auth: {
+	user:"segarvaradha@gmail.com",
+	pass:"gmail_password"
+      }  
+
+   });
+ 
+var mail ={
+
+	from: "SEGAR V <segarvaradha@gmail.com>",
+	to: "ghsdharmapuri@gmail.com",
+	
+	subject: 'Message From ' + userEmail,    // Subject line
+        text: 'Hi....' + userEmail      // plaintext body
+       }
+
+smtpTransport.sendMail(mail, function(err,response){
+
+	if (err){
+		console.log(err);
+	    }else{
+		console.log('Message sent: ' + info.response);
+       		 var html = 'Hello: ' + userEmail + '.<br>' +
+           	 '<a href="/">Try again.</a>';
+        	res.send(html);
+	      }
+      smtpTransport.close();
+
+     });
+
+});
+    
+    
+    
 
 function createTemplate (data) {
      var title= data.title;
