@@ -49,8 +49,8 @@ app.post('/mail', function(req, res) {
     var userEmail = req.body.userEmail;
 
     var smtpTransport= mailer.createTransport("SMTP",{
-	//host: 'smtp.gmail.com',
-	  host:'http://sekarvaradha.imad.hasura-app.io/',
+	host: 'smtp.gmail.com',
+	  //host:'http://sekarvaradha.imad.hasura-app.io/',
         secureConnection: false,
         port: 587,
 	service :"Gmail",
