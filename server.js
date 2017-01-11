@@ -4,7 +4,7 @@ var path = require('path');
 var pg =require('pg');
 var app = express();
 var crypto=require('crypto');
-var mailer =require('nodemailer');
+//var mailer =require('nodemailer');
 
 var bodyParser= require('body-parser');
 app.use(morgan('combined'));
@@ -52,7 +52,7 @@ app.post('/mail', function(req, res) {
 	host: 'smtp.gmail.com',
 	  //host:'http://sekarvaradha.imad.hasura-app.io/',
         secureConnection: false,
-        port: 587,
+       // port: 587,
 	service :"Gmail",
    auth: {
 	user:"segarvaradha@gmail.com",
