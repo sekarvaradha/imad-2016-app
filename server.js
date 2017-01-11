@@ -34,7 +34,7 @@ app.get("/test-db", function (req,res){
       });
 });
 
-app.get("/sendmail", function (req,res){
+/*app.get("/sendmail", function (req,res){
  var html = '<form action="/mail" method="post">' +
         'Enter Email id:' +
         '<input type="text" name="userEmail"placeholder="Email" />' +
@@ -84,7 +84,7 @@ smtpTransport.sendMail(mail, function(err,response){
 
      });
 
-});
+}); */
     
     
     
